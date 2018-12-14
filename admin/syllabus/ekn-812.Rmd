@@ -1,0 +1,211 @@
+---
+output:
+  pdf_document:
+    keep_tex: false
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: /Users/jesse/Dropbox/home/templates/svm-latex-syllabus.tex
+bibliography: /Users/jesse/Dropbox/home/library.bib
+biblio-style: authordate1
+geometry: margin=1in
+
+title: "EKT 812: Microeconomics"
+author: Jesse Naidoo
+date: "Semester 1, 2019"
+
+email: "jesse.naidoo@up.ac.za"
+# web: "svmiller.com/teaching"
+officehours: "???"
+office: "Tukkiewerf 2-23"
+classroom: "Tukkiewerf 1-37"
+classhours: "???"
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+mon <- as.Date("2019-02-04")
+# fri <- as.Date("2016-01-08")
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("~/Dropbox/home/library.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+```
+
+# Course Description
+This is a course in (mostly classical) microeconomic theory. Our goal is for you to become competent users of that theory. We will also see that the scope of applications for these tools is very wide. A secondary goal is to learn to read economic research critically. The way to achieve both of these goals is by practicing: that is, by solving lots of problems and reading lots of papers.
+
+Below are the topics we will cover, stated "abstractly". However, this course is heavily biased towards applications; we want to use the theory to help us understand and explain real-world applications. I have also tended to pick readings that reflect my interests in development and labor economics, although not exclusively.
+
+## Prerequisites
+No prior knowledge of economics is strictly required, but you do need to understand how to solve a constrained optimization problem, and you need to know the envelope theorem. Basic algebra and calculus are required. You should also know how to compute the mean and variance of a random variable. If you do not know these things you have to revise them on your own, because our time together is scarce.
+
+## Advice
+I strongly encourage you to form study groups to help each other work on the problem sets and to discuss the readings. You will learn a lot more from your classmates than from me, if you take the time to seriously attempt the assignments.
+
+
+# Required Texts
+None. However, you may find useful complementary material in the following:
+
+- @Becker2007a
+- @Stigler1987
+- @McCloskey1985
+- @Deaton1980a
+- @Silberg2000
+
+Several of these are hard to come by, but I have asked the library to order all of them. However, @McCloskey1985 is available for (free) download from her website, and @Deaton1980a is still relatively easy to find (you can get it in print or in Kindle format from Amazon, for example).
+
+The papers I have listed below are not strictly necessary, but I assume you will want to see how the ideas and models we will study have been applied. It always helps to see an idea from several different angles.
+
+# Assessment
+
+# Class Schedule
+
+## `r advdate(mon, 1)`: Marshallian and Hicksian Demand
+
+_Suggested Readings_
+
+- @Cunha2018
+- @Dahl2016
+
+## `r advdate(mon, 2)`: Welfare Measurement in Partial and General Equilibrium
+
+_Suggested Readings_
+
+- @Hendren2017
+- @Atkin2018; @Atkin2015
+
+## `r advdate(mon, 3)`: Durable Goods
+
+_Suggested Readings_
+
+- @Hoekstra2017
+- @Glaeser2005
+- @Bulow1982; @Mussa1978; @Stokey1981
+
+## `r advdate(mon, 4)`: Derived Demand and Factor Markets
+
+_Suggested Readings_
+
+- @Kennan1995
+- @MaCurdy2015
+- @Jardim2017
+
+## `r advdate(mon, 5)`: Risk-Sharing and Insurance
+
+_Suggested Readings_
+
+- @Townsend1994
+- @Bryan2019; @Morten2019
+- @Meng2015
+
+## `r advdate(mon, 6)`: Comparative Advantage
+
+_Suggested Readings_
+
+- @Willis1979
+- @Eaton2002; @Eaton2012
+
+## `r advdate(mon, 7)`: Supply-Side Aggregation; Human Capital
+
+_Suggested Readings_
+
+- @Rosen1983; @Rosen1978
+- @Neal2000
+- @Heckman1987
+
+## `r advdate(mon, 8)`: Autumn Break
+No class; I will post a take-home midterm before the break.
+
+## `r advdate(mon, 9)`: Human Capital (continued)
+
+
+_Suggested Readings_
+
+- @Neal2000
+- @Heckman2004
+- @Lochner2012
+- @Behrman2010; @Kremer2011
+- @Bryan2014
+
+## `r advdate(mon, 10)`: Efficiency in the Public Sector
+
+_Suggested Readings_
+
+- @Shleifer1998; @Hart1997
+- @Muralidharan2017; @Chaudhury2006
+- @Galiani2005
+
+## `r advdate(mon, 11)`: Constraints on Supply
+
+_Suggested Readings_
+
+- @Banerjee2015; @Banerjee2015
+- @Kaboski2011; @Meager2019
+- @Glaeser2018
+- @Rosen1981; @Rosen2002
+
+## `r advdate(mon, 12)`: Competitive Markets and Hedonic Pricing
+
+_Suggested Readings_
+
+- @Rosen1974
+- @Rosen1986
+- @Chay2005
+
+## `r advdate(mon, 13)`: Regulation and Taxation
+
+_Suggested Readings_
+
+- @Ito2018
+- @Cunningham2018
+- @Mulligan2016
+- @Davis2008
+
+## `r advdate(mon, 14)`: Public Goods and Externalities
+
+_Suggested Readings_
+
+- @Becker2006
+- @Greenstone2014
+- @Hall2018
+- @Kreindler2018
+
+## `r advdate(mon, 15)`: Non-Price Allocation
+
+_Suggested Readings_
+
+- @Deacon1989
+- @Weitzman1977
+- @Diamond2018
+
+## `r advdate(mon, 16)`: Property Rights
+
+_Suggested Readings_
+
+- @Besley2010
+- @Hornbeck2010
+- @Field2007
+- @Galiani2010
+
+
+# References
