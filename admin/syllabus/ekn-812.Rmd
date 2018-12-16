@@ -52,9 +52,9 @@ myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE,
 ```
 
 # Course Description
-This is a course in (mostly classical) microeconomic theory. Our goal is for you to become competent users of that theory. We will also see that the scope of applications for these tools is very wide. A secondary goal is to learn to read economic research critically. The way to achieve both of these goals is by practicing: that is, by solving lots of problems and reading lots of papers.
+This is a course in (mostly classical) microeconomic theory. Our goal is for you to become competent users of that theory. A secondary goal is to learn to read economic research critically. The way to achieve both of these goals is by practicing: that is, by solving lots of problems and reading lots of papers.
 
-Below are the topics we will cover, stated "abstractly". However, this course is heavily biased towards applications; we want to use the theory to help us understand and explain real-world applications. I have also tended to pick readings that reflect my interests in development and labor economics, although not exclusively.
+Below are the topics we will cover, stated "abstractly". However, this course is heavily biased towards applications; we want to use the theory to help us understand and explain real-world applications. As you will see, the scope of applications for these tools is very wide. I have also tended to pick readings that reflect my interests in development and labor economics, although not exclusively.
 
 ## Prerequisites
 No prior knowledge of economics is strictly required, but you do need to understand how to solve a constrained optimization problem, and you need to know the envelope theorem. Basic algebra and calculus are required. You should also know how to compute the mean and variance of a random variable. If you do not know these things you have to revise them on your own, because our time together is scarce.
