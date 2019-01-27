@@ -66,14 +66,14 @@ I strongly encourage you to form study groups to help each other work on the pro
 # Required Texts
 None. However, you may find useful complementary material in the following:
 
-- @Becker2007a
-- @Friedman1962
-- @Stigler1987
-- @McCloskey1985
+- @Becker2007a^[Note: this book was written and first published in the mid-1960s. As such, it uses outdated and possibly offensive terms to refer to black Americans in its discussion of certain labor market issues. You are welcome to use any of the other texts instead.]
 - @Deaton1980a
-- @Silberg2000
+- @Friedman1962
+- @McCloskey1985
+- @Silberberg2000
+- @Stigler1987
 
-Several of these are hard to come by, but I have asked the library to put all of them on reserve. However, @McCloskey1985 is available for (free) download from her website, and @Deaton1980a is still relatively easy to find. @Becker2007a and @Friedman1962 are now available in Kindle format from Amazon, as is @Deaton1980a. 
+Some of these are hard to come by, but I have asked the library to put all of them on reserve; at the time of writing, @Stigler1987, @Deaton1980a and @Silberberg2000 are available. @McCloskey1985 is available for (free) download from her website, and @Deaton1980a is still relatively easy to find. @Becker2007a and @Friedman1962 are now available in Kindle format from Amazon, as is @Deaton1980a. 
 
 The papers I have listed below are not strictly necessary, but I assume you will want to see how the ideas and models we will study have been applied. It always helps to see an idea from several different angles.
 
@@ -82,46 +82,48 @@ There will be 8 problem sets, a take-home midterm, and a final exam (in class).
 
 # Class Schedule
 
-## `r advdate(mon, 1)`: The Economic Approach to Human Behavior; Marshallian and Hicksian Demand
+## `r advdate(mon, 1)`: Marshallian and Hicksian Demand
 
 _Required Readings_
 
-- @Friedman1953
 - @Becker1993b
+
+_Suggested Readings: Elements of Consumer Theory_
+
 - @Becker1962
-
-_Suggested Readings_
-
 - @Becker2007a, Ch. 2
-- @Deaton1980a, Ch. 1-6
-- @Silberg2000, Ch. 10
+- @Deaton1980a, Ch. 1-2
+- @Silberberg2000, Ch. 10
 - @Friedman1962, Ch. 2
 - @Varian1992, Ch. 7-9
+
+_Suggested Readings: The Economic Approach to Human Behavior_
+
+- @Friedman1953
 - @Stigler1977
 - @Rosen2002
 
 _Applications_ 
 
-- @Davis2008
 - @Cunha2018
-- @Dahl2016
 
-## `r advdate(mon, 2)`: Welfare Measurement
+## `r advdate(mon, 2)`: Welfare Measurement, Revealed Preference and Separability
 
 _Suggested Readings_
 
 - @Becker2007a, Ch. 3
 - @Deaton1980a, Ch. 7-8
-- @Silberg2000, Ch. 11; 19
+- @Silberberg2000, Ch. 11; 19
+- @Stigler1987, Ch. 4
 
 _Additional Readings_
 
 - @Friedman1962, Ch. 2
 - @Varian1992, Ch. 10
+- @Hendren2017
 
 _Applications_
 
-- @Hendren2017
 - @Atkin2018
 - @Atkin2015
 
@@ -129,8 +131,8 @@ _Applications_
 
 _Suggested Readings_
 
-- @Becker2007a, Ch. 3
-- @Silberg2000, Ch. 12
+- @Becker2007a, Ch. 3; 10
+- @Silberberg2000, Ch. 12
 - @Deaton1980a, Ch. 12 - 13
 
 ## `r advdate(mon, 4)`: Choice Under Uncertainty
@@ -139,12 +141,13 @@ _Suggested Readings_
 
 - @Becker2007a, Ch. 4
 - @Deaton1980a, Ch. 14
-- @Silberg2000, Ch. 13
+- @Silberberg2000, Ch. 13
 
 _Additional Readings_
 
 - @Friedman1962, Ch. 4
 - @Varian1992, Ch. 11
+- @Stigler1987, Ch. 14
 
 _Applications_
 
@@ -158,7 +161,7 @@ _Suggested Readings_
 
 - @Becker2007a, Ch. 5
 - @Coase1960
-- @Silberg2000, Ch. 8-9
+- @Silberberg2000, Ch. 8-9
 
 ## `r advdate(mon, 6)`: Supply in Product Markets (continued)
 
@@ -166,12 +169,14 @@ _Suggested Readings_
 
 - @Friedman1962, Ch. 5-6
 - @Stigler1987, Ch. 7-10
+- @Rosen1981
 
 _Applications_
 
+- @Shleifer1998
+- @Boycko1996
 - @Kreindler2018
 - @Hall2018
-- @Rosen1981
 - @Murphy1989
 - @Lazear2001
 
@@ -187,6 +192,9 @@ _Additional Readings_
 - @Stigler1987, Ch. 11-13
 - @Varian1992, Ch. 13-14
 - @Weyl2013
+- @Deacon1989
+- @Weitzman1977
+- @Mulligan2016
 
 ## `r advdate(mon, 8)`: Autumn Break
 No class; I will post a take-home midterm before the break.
@@ -197,9 +205,6 @@ _Applications_
 
 - @Demsetz1968
 - @Becker2006
-- @Deacon1989
-- @Weitzman1977
-- @Mulligan2016
 - @Glaeser2003a
 - @Diamond2018
 - @Prendergast2017
@@ -211,6 +216,7 @@ _Applications_
 _Suggested Readings_
 
 - @Becker2007a, Ch. 7
+- @Silberberg2000, Ch. 8-9
 
 _Additional Readings_
 
@@ -225,7 +231,7 @@ _Applications_
 - @Bloom2013; @Bloom2010
 - @Lucas1978; @Rosen1981
 - @Neal2018, Ch. 1
-- @Shleifer1998; @Hart1997
+- @Hart1997
 - @Muralidharan2017; @Chaudhury2006
 - @Galiani2005
 
@@ -235,6 +241,7 @@ _Applications_
 _Suggested Readings_
 
 - @Becker2007a, Ch. 8
+- @Silberberg2000, Ch. 8-9
 
 _Additional Readings_
 
@@ -249,8 +256,10 @@ _Applications_
 
 - @Neal2018, Ch. 2; @Neal2011
 - @Autor2013
+- @Wang2018
 - @Acemoglu2011
 - @Atalay2014
+- @Hsieh2009
 
 ## `r advdate(mon, 14)`: Human Capital
 
@@ -282,7 +291,8 @@ _Applications_
 
 _Suggested Readings_
 
-- @Becker2007a, Ch. 10
+- @Becker2007a, Ch. 3; 10
+- @Silberberg2000, Ch. 12
 - @Friedman1962, Ch. 17
 - @Stigler1987, Ch. 19
 
