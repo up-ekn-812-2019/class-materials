@@ -1,9 +1,9 @@
 ---
 title: 'EKN-812: Problem Set 0'
 author: "Jesse Naidoo"
-date: "1/27/2019"
+date: 
 output: pdf_document
-bibliography: /Users/jesse/Dropbox/home/library.bib
+bibliography: /Users/jnaidoo/Dropbox/office/library.bib
 biblio-style: authordate1
 geometry: margin=1in
 ---
@@ -15,12 +15,17 @@ Review these materials:
 - David Autor's notes on math tools for microeconomics [(link)](https://ocw.mit.edu/courses/economics/14-03-microeconomic-theory-and-public-policy-fall-2016/lecture-notes/MIT14_03F16_lec3MathTools.pdf)
 - These notes from Royal Holloway's math camp [(link)](http://royalholloway.ac.uk/economics/documents/pdf/courseformsandinfo/ec5555lecture6(2013)-constrainedoptimsation.pdf)
 - Martin Osborne's online tutorials on mathematical methods for economic theory [(link)](https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/toc), sections 4 - 7.
+- @Varian1992, Ch. 27 (optimization)
+
+For a deeper treatment of why the above "cookbook" techniques work, you should read:
+
 - @Silberberg2000, Ch. 6 (comparative statics) 
 - @Silberberg2000, Ch. 7 (envelope theorem)
+- @Silberberg2000, Ch. 14 (problems with inequality constraints; Kuhn-Tucker conditions)
 
-Sindi has made copies of the chapters from @Silberberg2000, but you can also find the book on reserve at the library. The appendix to @Varian1992 is also useful for these topics. You may also want to review your undergraduate notes or textbooks on calculus, and on constrained optimization. 
+Sonja has made copies of the chapters from @Silberberg2000, but you can also find the book on reserve at the library. I have also placed @Varian1992 on reserve.
 
-The Osborne notes (linked above) are a good review of calculus and the basic theory of convex functions. I'll assume you know all the material in sections 1 - 3 of those notes.
+You may also want to review your undergraduate notes or textbooks on calculus, and on constrained optimization. Chapter 26 of @Varian1992 contains most of what you should already know (i.e. if it looks unfamiliar, go revise it!). The Osborne notes (linked above) are a good review of calculus and the basic theory of convex functions. I'll assume you know all the material in sections 1 - 3 of those notes.
 
 # Exercises
 We will be using the above techniques often this semester. Try the exercises below and we will discuss the solutions in the first week of classes.
@@ -32,22 +37,20 @@ $$
 f(x,y) = (x - 3y + 1)^2 + y^2 + 4.
 $$
 
-Solve the problem 
+We want to solve the problem 
 
 $$
-\min_{x \geq 0, y \geq 0} f(x,y)
+\min_{x, y} f(x,y) 
 $$
-subject to the constraint $x + y = 4$. How do you know you have found a (local) minimum and not a maximum?
+subject to the constraints $x + y \geq 4$, $x \geq 0$ and $y \geq 0$.
 
-2. If $f(x,y) = x^2 -\log x + xy$, solve
+(a) Write down the Lagrangian for this problem. Use $\lambda$ as the multiplier on the constraint that $x + y \geq 4$, and use
+    $\delta_x$ and $\delta_y$ for the nonnegativity constraints on $x$ and $y. Write out the system of inequalities that comes from the first-order conditions.
+(b) How many different cases are there to consider when finding a solution? (i.e. $x^* > 0$ vs. $x^* = 0$, etc) Can you eliminate any of them? (Hint: use the complementary slackness conditions!)
+(c) Find the solution(s) $(x^*, y^*, \lambda^*, \delta^*_x, \delta^*_y)$.
+(d) How do you know you have found a (local) minimum and not a maximum?
 
-\begin{eqnarray}
-\max_{x \geq 0, y \geq 0} f(x,y) & \text{s.t.} & x + y = 10
-\end{eqnarray}
-
-Is there an interior solution to this problem?
-
-3. Suppose $\alpha$ is a known constant. Solve
+2. Suppose $\alpha$ is a known constant. Solve
 
 \begin{eqnarray*}
 \max_{x, y} 4x + \alpha y & \text{s.t.} & x^2 + y^2 \leq 25 \\
@@ -55,14 +58,23 @@ Is there an interior solution to this problem?
 && 4 \geq y \geq 0 
 \end{eqnarray*}
 
-Which of the constraints bind at the solution? Which are slack? How (if at all) does your answer depend on $\alpha$?
+Which of the constraints bind at the solution? Which are slack? How (if at all) does your answer depend on $\alpha$? You may want to use the notation $x^*(\alpha)$, $y^*(\alpha)$ etc. to emphasize this dependence.
 
-4. Minimize $f(x,y,z) = x^2 + y^2 + (z-3)^2$ subject to the constraints
+3. Minimize $f(x,y,z) = x^2 + y^2 + (z-3)^2$ subject to the constraints
 
 \begin{eqnarray}
 x + 2y & \geq & 4 \\
 x + y + z & \geq & 6.
 \end{eqnarray}
+
+4. If $f(x,y) = x^2 -\log x + xy$, solve
+
+\begin{eqnarray}
+\max_{x \geq 0, y \geq 0} f(x,y) & \text{s.t.} & x + y = 10
+\end{eqnarray}
+
+using the same steps (a) - (d) as above. Is there an interior solution to this problem?
+
 
 ## Envelope Theorem
 
