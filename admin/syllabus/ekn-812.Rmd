@@ -92,7 +92,7 @@ _Suggested Readings: Elements of Consumer Theory_
 
 - @Becker1962
 - @Becker2007a, Ch. 2
-- @Deaton1980a, Ch. 1-2
+- @Deaton1980a, Ch. 1-2; 4
 - @Silberberg2000, Ch. 10
 - @Friedman1962, Ch. 2
 - @Varian1992, Ch. 7-9
@@ -112,7 +112,7 @@ _Applications_
 _Suggested Readings_
 
 - @Becker2007a, Ch. 3
-- @Deaton1980a, Ch. 7-8
+- @Deaton1980a, Ch. 4-7
 - @Silberberg2000, Ch. 11; 19
 - @Stigler1987, Ch. 4
 
