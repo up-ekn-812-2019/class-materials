@@ -78,7 +78,12 @@ Some of these are hard to come by, but I have asked the library to put all of th
 The papers I have listed below are not strictly necessary, but I assume you will want to see how the ideas and models we will study have been applied. It always helps to see an idea from several different angles.
 
 # Assessment
-There will be 8 problem sets, a take-home midterm, and a final exam (in class).
+There will be 6 problem sets, a take-home midterm, and a final exam (in class). Your final grade will be a weighted average of your performance on each of these, with the weights being either:
+
+- 20\% problem sets + 20\% midterm + 60\% final, or
+- 25\% problem sets + 25\% midterm + 50\% final,
+
+whichever is in your favor.
 
 # Class Schedule
 
@@ -242,6 +247,9 @@ _Suggested Readings_
 
 - @Becker2007a, Ch. 8
 - @Silberberg2000, Ch. 8-9
+- @Ewerhart2003
+- @Becker1965; @Michael1973a
+- @Heckman2015; @Chiappori2015
 
 _Additional Readings_
 
