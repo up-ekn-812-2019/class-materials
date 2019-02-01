@@ -1,0 +1,108 @@
+---
+title: EKN-812 Lecture 1
+subtitle:
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: /Users/jnaidoo/Dropbox/office/templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: true
+    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: /Users/jnaidoo/Dropbox/office/library.bib
+biblio-style: authordate1
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #522D80;
+
+}
+
+.title-slide hgroup h1 {
+  color: #522D80;
+}
+
+
+
+h2 {
+
+  color: #522D80;
+}
+
+slides > slide.dark {
+  background: #522D80 !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+
+
+# The Economic Approach to Human Behavior
+
+## The Economic Approach to Human Behavior
+
+## What Good is (Economic) Theory?
+
+## Outline for Today
+
+- budget constraints
+- preferences: axiomatic foundations
+- Hicksian and Marshallian demand
+- implications of rational choice: symmetry, homogeneity and adding up
+- substitutes and complements; constrained demand functions and rationing
+
+# The Budget Constraint
+
+## Cournot and Engel Aggregation
+
+## Slutsky Compensation for Price Changes
+
+## Irrational Behavior and the "Law of Demand"
+
+# Preferences: Axiomatic Foundations
+
+# Hicksian and Marshallian Demand
+
+# Implications of Rational Choice: Slutsky Matrices are Negative Semidefinite
+
+# Marshallian Elasticities
+
+# Hicksian Elasticities
+
+## Substitutes and Complements
+
+## Constrained Demand
+
+## References
