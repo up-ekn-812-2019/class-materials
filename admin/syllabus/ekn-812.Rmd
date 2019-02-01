@@ -4,8 +4,8 @@ output:
     keep_tex: false
     fig_caption: yes
     latex_engine: pdflatex
-    template: /Users/jesse/Dropbox/home/templates/svm-latex-syllabus.tex
-bibliography: /Users/jesse/Dropbox/home/library.bib
+    template: /Users/jnaidoo/Dropbox/office/templates/svm-latex-syllabus.tex
+bibliography: /Users/jnaidoo/Dropbox/office/library.bib
 biblio-style: authordate1
 geometry: margin=1in
 

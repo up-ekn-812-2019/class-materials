@@ -1,2 +1,5 @@
 # R history
 *.Rhistory
+
+# problem sets (each to be in its own repo)
+problem-sets/
