@@ -1,5 +1,8 @@
 # R history
 *.Rhistory
 
+# class list, grades, etc
+admin/*.csv
+
 # problem sets (each to be in its own repo)
 problem-sets/
