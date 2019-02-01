@@ -46,7 +46,7 @@ advdate <- function(obj, adv) {
 library(RefManageR)
 # library(knitcitations)
 # library(rcrossref)
-bib <- ReadBib("~/Dropbox/home/library.bib")
+bib <- ReadBib("~/Dropbox/office/library.bib")
 myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
 
 ```

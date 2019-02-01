@@ -1,0 +1,317 @@
+---
+output:
+  pdf_document:
+    keep_tex: false
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: /Users/jesse/Dropbox/home/templates/svm-latex-syllabus.tex
+bibliography: /Users/jesse/Dropbox/home/library.bib
+biblio-style: authordate1
+geometry: margin=1in
+
+title: "EKN 812: Microeconomics"
+author: Jesse Naidoo
+date: "Semester 1, 2019"
+
+email: "jesse.naidoo@up.ac.za"
+# web: "svmiller.com/teaching"
+officehours: "TBD"
+office: "Tukkiewerf 2-23"
+classroom: "Tukkiewerf 1-37"
+classhours: "Monday 16.00 - 19.00"
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+mon <- as.Date("2019-02-04")
+# fri <- as.Date("2016-01-08")
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("~/Dropbox/home/library.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+```
+
+# Course Description
+This is a course in (mostly classical) microeconomic theory. Our goal is for you to become competent users of that theory. A secondary goal is to learn to read economic research critically. The way to achieve both of these goals is by practicing: that is, by solving lots of problems and reading lots of papers.
+
+Below are the topics we will cover, stated "abstractly". However, this course is heavily biased towards applications; we want to use the theory to help us understand and explain real-world applications. As you will see, the scope of applications for these tools is very wide. I have also tended to pick readings that reflect my interests in development and labor economics, although not exclusively.
+
+## Prerequisites
+No prior knowledge of economics is strictly required, but you do need to understand how to solve a constrained optimization problem, and you need to know the envelope theorem. Basic algebra and calculus are required. You should also know how to compute the mean and variance of a random variable. Although we will cover some of these things in the first week, you may have to revise them on your own.
+
+## Advice
+I strongly encourage you to form study groups to help each other work on the problem sets and to discuss the readings. You will learn a lot more from your classmates than from me, if you take the time to seriously attempt the assignments.
+
+
+# Required Texts
+None. However, you may find useful complementary material in the following:
+
+- @Becker2007a^[Note: this book was written and first published in the mid-1960s. As such, it uses outdated and possibly offensive terms to refer to black Americans in its discussion of certain labor market issues. You are welcome to use any of the other texts instead.]
+- @Deaton1980a
+- @Friedman1962
+- @McCloskey1985
+- @Silberberg2000
+- @Stigler1987
+
+Some of these are hard to come by, but I have asked the library to put all of them on reserve; at the time of writing, @Stigler1987, @Deaton1980a and @Silberberg2000 are available. @McCloskey1985 is available for (free) download from her website, and @Deaton1980a is still relatively easy to find. @Becker2007a and @Friedman1962 are now available in Kindle format from Amazon, as is @Deaton1980a. 
+
+The papers I have listed below are not strictly necessary, but I assume you will want to see how the ideas and models we will study have been applied. It always helps to see an idea from several different angles.
+
+# Assessment
+There will be 6 problem sets, a take-home midterm, and a final exam (in class). Your final grade will be a weighted average of your performance on each of these, with the weights being either:
+
+- 20\% problem sets + 20\% midterm + 60\% final, or
+- 25\% problem sets + 25\% midterm + 50\% final,
+
+whichever is in your favor.
+
+# Class Schedule
+
+## `r advdate(mon, 1)`: Marshallian and Hicksian Demand
+
+_Required Readings_
+
+- @Becker1993b
+
+_Suggested Readings: Elements of Consumer Theory_
+
+- @Becker1962
+- @Becker2007a, Ch. 2
+- @Deaton1980a, Ch. 1-2; 4
+- @Silberberg2000, Ch. 10
+- @Friedman1962, Ch. 2
+- @Varian1992, Ch. 7-9
+
+_Suggested Readings: The Economic Approach to Human Behavior_
+
+- @Friedman1953
+- @Stigler1977
+- @Rosen2002
+
+_Applications_ 
+
+- @Cunha2018
+
+## `r advdate(mon, 2)`: Welfare Measurement, Revealed Preference and Separability
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 3
+- @Deaton1980a, Ch. 4-7
+- @Silberberg2000, Ch. 11; 19
+- @Stigler1987, Ch. 4
+
+_Additional Readings_
+
+- @Friedman1962, Ch. 2
+- @Varian1992, Ch. 10
+- @Hendren2017
+
+_Applications_
+
+- @Atkin2018
+- @Atkin2015
+
+## `r advdate(mon, 3)`: Intertemporal Choice and Durable Goods
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 3; 10
+- @Silberberg2000, Ch. 12
+- @Deaton1980a, Ch. 12 - 13
+
+## `r advdate(mon, 4)`: Choice Under Uncertainty
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 4
+- @Deaton1980a, Ch. 14
+- @Silberberg2000, Ch. 13
+
+_Additional Readings_
+
+- @Friedman1962, Ch. 4
+- @Varian1992, Ch. 11
+- @Stigler1987, Ch. 14
+
+_Applications_
+
+- @Townsend1994
+- @Bryan2019; @Morten2019
+- @Meng2015
+
+## `r advdate(mon, 5)`: Supply in Product Markets
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 5
+- @Coase1960
+- @Silberberg2000, Ch. 8-9
+
+## `r advdate(mon, 6)`: Supply in Product Markets (continued)
+
+_Suggested Readings_
+
+- @Friedman1962, Ch. 5-6
+- @Stigler1987, Ch. 7-10
+- @Rosen1981
+
+_Applications_
+
+- @Shleifer1998
+- @Boycko1996
+- @Kreindler2018
+- @Hall2018
+- @Murphy1989
+- @Lazear2001
+
+## `r advdate(mon, 7)`: Equilibrium in Product Markets
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 6
+- @Rosen1974
+
+_Additional Readings_
+
+- @Stigler1987, Ch. 11-13
+- @Varian1992, Ch. 13-14
+- @Weyl2013
+- @Deacon1989
+- @Weitzman1977
+- @Mulligan2016
+
+## `r advdate(mon, 8)`: Autumn Break
+No class; I will post a take-home midterm before the break.
+
+## `r advdate(mon, 9)`: Equilibrium in Product Markets (continued)
+
+_Applications_
+
+- @Demsetz1968
+- @Becker2006
+- @Glaeser2003a
+- @Diamond2018
+- @Prendergast2017
+- @Neal2018, Ch. 3-5
+
+
+## `r advdate(mon, 10)`: Production and Costs
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 7
+- @Silberberg2000, Ch. 8-9
+
+_Additional Readings_
+
+- @Varian1992, Ch. 1-6; 18
+- @Stigler1976
+
+## `r advdate(mon, 11)`: Production and Costs (continued)
+
+_Applications_
+
+- @Syverson2011
+- @Bloom2013; @Bloom2010
+- @Lucas1978; @Rosen1981
+- @Neal2018, Ch. 1
+- @Hart1997
+- @Muralidharan2017; @Chaudhury2006
+- @Galiani2005
+
+
+## `r advdate(mon, 12)`: Factor Demand
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 8
+- @Silberberg2000, Ch. 8-9
+- @Ewerhart2003
+- @Becker1965; @Michael1973a
+- @Heckman2015; @Chiappori2015
+
+_Additional Readings_
+
+- @Friedman1962, Ch. 7-10
+- @Stigler1987, Ch. 15; 17
+- @Varian1992, Ch. 4-6
+- @Rosen1978
+
+## `r advdate(mon, 13)`: Factor Demand (continued)
+
+_Applications_
+
+- @Neal2018, Ch. 2; @Neal2011
+- @Autor2013
+- @Wang2018
+- @Acemoglu2011
+- @Atalay2014
+- @Hsieh2009
+
+## `r advdate(mon, 14)`: Human Capital
+
+_Suggested Readings_
+
+- @Becker1994, Ch. 2
+- @Becker2007a, Ch. 9
+- @Neal2000; @Rosen1985
+
+_Additional Readings_
+
+- @Friedman1962, Ch. 11-15
+- @Stigler1987, Ch. 17-18
+- @Rosen1983a
+- @Becker2007
+
+## `r advdate(mon, 15)`: Human Capital (continued)
+
+_Applications_
+
+- @Murphy2018
+- @Lazear2009; @Topel1991
+- @Greenstone2014
+- @Murphy2006
+- @Rosenzweig2010
+- @Lagakos2018; @Lagakos2018a
+
+## `r advdate(mon, 16)`: Physical Capital (Including Improvements to Land)
+
+_Suggested Readings_
+
+- @Becker2007a, Ch. 3; 10
+- @Silberberg2000, Ch. 12
+- @Friedman1962, Ch. 17
+- @Stigler1987, Ch. 19
+
+_Applications_
+
+- @Deaton1997, Ch. 6
+- @Banerjee2015; @Banerjee2015
+- @Kaboski2011; @Meager2019
+- @Glaeser2018; @Topel1988
+- @Caballero1999
+- @Rosen1994
+- @Rosen1999
+
+# References
