@@ -1,6 +1,6 @@
 ---
 title: EKN-812 Lecture 1
-subtitle:
+subtitle: Methodology; Basic Theory of Demand
 author: Jesse Naidoo
 institute: University of Pretoria
 fontsize: 10pt
@@ -9,7 +9,7 @@ output:
     template: /Users/jesse/Dropbox/home/templates/svm-latex-beamer.tex
     keep_tex: false
     incremental: true
-    toc: true
+#    toc: true
     slide_level: 2
  ioslides_presentation:
     smaller: true
@@ -80,29 +80,256 @@ padding-bottom: 10px;
 - budget constraints
 - preferences: axiomatic foundations
 - Hicksian and Marshallian demand
-- implications of rational choice: symmetry, homogeneity and adding up
+- implications of rational choice: symmetry, homogeneity, negativity
 - substitutes and complements; constrained demand functions and rationing
 
 # The Budget Constraint
 
+## Choice and Scarcity
+
+- "choice" is meaningless if there is no scarcity
+- a simple situation in which resources are limited:
+  - two goods $x_1$, $x_2$ available in any nonnegative amounts
+  - constant prices $p_1, p_2 > 0$ and a given budget $y$
+  - then $p_1x_1 + p_2x_2 \leq y$
+- consumer choices give us the functions $x^*_1(p, y), x^*_2(p,y)$
+  - here $p = (p_1, p_2)$ is the vector of prices
+- the budget constraint alone places some restrictions on behavior
+
+## Notation: Shares and Elasticities
+
+- Say we are choosing quantities of $n$ goods with prices $p_i$ ($i = 1, \ldots n$)
+- the $i$-th budget share is 
+  $$
+  s_i = \frac{p_ix^*_i}{y}
+  $$
+- the income elasticity of the $i$-th good is
+  $$
+  \eta_i = \frac{y}{x^*_i}\frac{\partial x_i^*}{\partial y}
+  $$
+- the elasticity of demand for good $i$ with respect to the $j$\th price is 
+  $$
+  \varepsilon_{ij} = \frac{p_j}{x^*_i}\frac{\partial x_i^*}{\partial p_j}
+  $$
+- obviously these quantities are all "local" 
+  - might vary with the particular $(p,y)$ facing the consumer
+- shares and elasticities are unitless 
+  - why is this good?
+
+
 ## Cournot and Engel Aggregation
+
+- budget constraint holds as an identity in $(p, y)$, so we can differentiate it
+- differentiate wrt $y$ to get "Engel aggregation"
+  - in elasticity form:
+    $$
+    \sum^n_{i=1}s_i\eta_i \equiv 1
+    $$
+  - budget-share weighted average of income elasticities is always 1
+- differentiate wrt $p_j$ to get "Cournot aggregation"
+  - in elasticity form:
+    $$
+    s_j + \sum^n_{i=1}s_i \varepsilon_{ij} \equiv 0
+    $$
 
 ## Slutsky Compensation for Price Changes
 
+- price changes have two effects on the budget set
+  - change the relative price of goods
+  - change aggregate "purchasing power"
+- it is often useful to distinguish between these two mechanism for how prices affect choices
+  - substitution effects due to changes in relative prices
+  - income effects due to changes in overall purchasing power
+- as a simple example of why this distinction might matter, consider two policies:
+  - levy a general consumption tax to fund highway maintainence
+  - collect tolls on drivers
+- Slutsky compensation: alter income after a price change such that the original bundle is feasible
+  - with two goods, suppose $p_1$ rises to $p'_1 > p_1$; what is the Slutsky compensation?
+
 ## Irrational Behavior and the "Law of Demand"
 
-# Preferences: Axiomatic Foundations
+- main result in consumer theory: compensated own-price effects are negative
+  - "demand curves slope down"
+  - we will see a more precise statement of this later
+- however, a lot of the positive content of consumer theory comes from the budget constraint alone
+  - not from particular assumptions about rationality
+- suppose prices are $p_1, p_2$ and all consumers have the same income $y$
+- suppose consumers are passive: half buy only $x_1$ and half buy only $x_2$
+  - what is the market demand?
+- now, suppose $p_1$ rises to $p'_1$ and we compensate everyone
+  - what happens to market demand?
+- why does this work?
 
-# Hicksian and Marshallian Demand
+# Preferences and Rational Choice
 
-# Implications of Rational Choice: Slutsky Matrices are Negative Semidefinite
+## Preferences
 
-# Marshallian Elasticities
+- we've just seen that the budget constraint alone implies restrictions on behavior (at least in aggregate)
+- even so it's often useful to introduce more structure into a model of how people make choices
+  - get sharper predictions
+  - a coherent language for thinking about _why_ people do what they do
+  - closely related: derive normative implications
+- you have already worked with utility functions, say $u(x)$
+  - it's possible to give an axiomatic foundation to the existence of such an object
+  - we won't use these too much
+  - but, it's good to know what exactly we are assuming when we work with utility functions
 
-# Hicksian Elasticities
+## Preferences: Axiomatic Foundations
+
+- suppose the set of bundles you can choose from is a subset of $\mathbb{R}^n_{+}$ (n-tuples of nonnegative reals)
+- what do we mean by "preferences"? 
+  - a "relation" $\succeq$ describing a person's evaluation of the statement "is at least as good as"
+  - a "binary relation" in the sense that you need two bundles $x$, $y$ in order to evaluate "$x \succeq y$"
+- if this relation satisfies certain properties then:
+  - we can construct a utility function $u(x)$ that "represents" this person's preferences
+  - in the sense that: $u(x) \geq u(y)$ if and only if $x \succeq y$
+
+## Preferences: Axiomatic Foundations
+
+- We can construct a continuous utility function $u$ that represents the preference relation $\succeq$ if the preferences relation is
+    - reflexive: for all $x$, $x \succeq x$
+    - complete: for all $x, y$ either $x \succeq y$ or $y \succeq  x$
+    - transative: if $x' \succeq x$ and $x^{\prime\prime} \succeq x'$, then also $x^{\prime\prime} \succeq  x$
+    - continuous: for any $x$, the sets $\{y: y \succeq x\}$ and $\{y: y \preceq x\}$ are closed
+- often it's convenient to add:
+    - convexity: if $x' \succeq x$, then for any $\alpha \in [0,1]$, $\alpha x' + (1-\alpha) x \succeq x$
+    - if we assume this, we get that $u$ is quasiconcave
+
+# Implications of Rational Choice
+
+## Duality: Hicksian and Marshallian Demand
+
+- two ways to think of the consumer's problem
+- maximize utility subject to a budget constraint
+    - $x^M(p,y) = \arg\max u(x) \text{ s.t. } px\leq y$ are the _Marshallian demands_
+    - $v(p,y) = \max u(x) \text{ s.t. } px\leq y$ is the _indirect utility function_
+- minimize the cost of obtaining a target level of utility
+    - $x^H(p,u) = \arg\min px \text{ s.t. } u(x) \geq u$ are the _Hicksian demands_
+    - $e(p,u) = \min px \text{ s.t. } u(x) \geq u$ is the _expenditure function_ (or _cost function_)
+- "obviously":
+    - $x^M(p, e(p,u)) \equiv x^H(p, u)$ for all $(p, u)$
+    - and, $x^H(p, v(p,y)) \equiv x^M(p,y)$ for all $(p, y)$
+- what are the analogous relationships between the expenditure and indirect utility functions?
+
+## Properties of Hicksian Demand
+
+- Hicksian demand is:
+  - easier to work with for welfare analysis (why?)
+  - harder to use, because we don't get to observe utility levels
+- let's notice some useful properties of $e(p,u)$:
+  - homogenous of degree one in $p$: for all $(p, u)$ and $t > 0$, $e(tp, u) \equiv te(p,u)$
+  - increasing in $u$ and in $p$
+  - concave in $p$ (why?)
+  - continuously differentiable in $p$
+  - Shephard's Lemma:
+    $$
+    \frac{\partial}{\partial p_i} e(p,u) \equiv x^H_i(p,u).
+    $$
+
+## Properties of Hicksian Demand
+
+- these special properties of the expenditure function imply restrictions on Hicksian demands
+  - adding-up: 
+    $$
+    \sum^n_{i=1} p_ix_i^H(p,u) \equiv e(p,u)
+    $$
+  - homogeneity of degree zero: for all $t > 0$ and all $(p, u)$, $x^H(tp, u) \equiv x^H(p, u)$
+  - symmetry: for all $i,j$,
+    $$
+     \frac{\partial^2 e}{\partial p_jp_i} = \frac{\partial x^H_i}{\partial p_j} = \frac{\partial x^H_j}{\partial p_i} = \frac{\partial^2 e}{\partial p_ip_j}.
+    $$
+  - negativity: the matrix $\sigma$ with $i,j$-th entry
+    $$
+    \sigma_{ij} = \frac{\partial x^H_i}{\partial p_j}
+    $$
+    is negative semidefinite.
+- this last one implies that compensated own-price effects are nonpositive: $\partial x^H_i/\partial p_i \leq 0$
+
+## Slutsky Equation
+
+- we can relate the observable Marshallian demands to the (unobservable) Hicksian ones
+  - differentiate the identity $x^M(p, e(p,u)) \equiv x_i^H(p, u)$ wrt $p_j$
+- the result is called the "Slutsky equation": 
+    $$
+    \varepsilon^M_{ij} = \varepsilon^H_{ij} - s_j\eta_j
+    $$
+- so, we can form the matrix $\sigma$, assuming we had enough data with exogenous variation in prices and incomes
+- then, the properties we mentioned are testable implications of rational choice
+  - adding-up
+  - homogeneity
+  - symmetry
+  - negativity
+
+## Hicksian Elasticities
+
+- we can translate the properties of Hicksian demand into elasticity form:
+  - homogeneity: for all goods $i$,
+    $$
+    \sum^n_{j=1} \varepsilon^H_{ij} = 0
+    $$
+  - adding-up (or use the utility constraint): for all $j$, 
+    $$
+    \sum^n_{i=1}s_i\varepsilon^H_{ij} = 0
+    $$
+  - symmetry: for all $i, j$
+    $$
+    s_i\varepsilon^H_{ij} = s_j\varepsilon^H_{ji}.
+    $$
+- two of these imply the third
+  - we don't have as many independent restrictions as it appears
+  - with a two-good demand system, how much information do we need to fully characterize demand?
+
+## Marshallian Elasticities
+
+- we've already seen some restrictions on Marshallian demand
+  - Cournot aggregation:
+    $$
+    s_j + \sum^n_{i=1} s_i \varepsilon^M_{ij} = 0
+    $$
+  - Engel aggregation:
+    $$
+    \sum^n_{i=1} s_i\eta_i = 1.
+    $$
+- of course, we can exploit the relationship to the compensated elasticities to derive other implications
 
 ## Substitutes and Complements
 
+- we could define $i$ and $j$ to be _substitutes_ if an increase in the price of $j$ leads to an increase in the (compensated) demand for $i$
+  - i.e. if $\varepsilon^H_{ij} > 0$
+- similarly, let's call $i$ and $j$ _complements_ if an increase in the price of $j$ leads to a _decrease_ in the compensated demand for $i$
+  - i.e. if $\varepsilon^H_{ij} < 0$
+- what might go wrong if we defined things in terms of Marshallian demand?
+- with a two-good demand system, you can only have substitutes (prove this!)
+
 ## Constrained Demand
+
+- so far we have only imposed the budget constraint on consumers
+- suppose the quantities of some goods were fixed, e.g. because of rationing
+    - say the quantity of good 1 is fixed at $z$, and $x_{-1}$ is the vector of all the other goods
+    - the consumer's expenditure-minimization problem becomes:
+    $$
+    \overline{e}(p, u, z) = \min_{x_{-1}} p_1z + p_{-1}x_{-1} \text{ s.t. } u(z, x_{-1}) \geq u
+    $$
+    - let $\overline{x}^H(p_{-1}, u, z)$ be the constrained Hicksian demands
+    - notice how the price of the rationed good does _not_ directly affect the constrained demands
+ 
+## Constrained Demand
+
+- let $\Delta(p, u, z) = \overline{e}(p, u, z) - e(p, u)$ be the "excess" expenditure due to rationing
+  - clearly $\Delta(p, u, z) \geq 0$ with a minumum where $z = x^H_1(p,u)$ - why?
+  - and, the constrained Hicksian demands satisfy
+    $$
+    \overline{x}^H_i(p_{-1}, u, x^H_1(p_1, p_{-1},u)) \equiv x^H_i(p_1, p_{-1},u)
+    $$
+- if we differentiate wrt the price of the rationed good ($p_1$),
+  $$
+  \frac{\partial \overline{x}_i}{\partial z} = \frac{\sigma_{i1}}{\sigma_{11}}
+  $$
+  - what does this tell us about the effects of rationing on the demand for other goods?
+- and, if we differentiate with respect to $p_i$, we get
+  $$
+  \frac{\partial \overline{x}^H_i}{\partial p_i} = \sigma_{ii} - \frac{\sigma_{i1}^2}{\sigma_{11}}
+  $$
+  - interpretation?
 
 ## References
