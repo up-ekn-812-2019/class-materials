@@ -14,7 +14,7 @@ author: Jesse Naidoo
 date: "Semester 1, 2019"
 
 email: "jesse.naidoo@up.ac.za"
-# web: "svmiller.com/teaching"
+web: "github.com/up-ekn-812-2019"
 officehours: "TBD"
 office: "Tukkiewerf 2-23"
 classroom: "Tukkiewerf 1-37"
