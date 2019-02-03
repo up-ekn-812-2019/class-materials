@@ -73,7 +73,34 @@ padding-bottom: 10px;
 
 ## The Economic Approach to Human Behavior
 
+- Alfred Marshall (1890): "Economics is a study of mankind in the ordinary business of life."
+- Lionel Robbins (1932): "Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses."
+- Gary Becker (1976): economics is defined by its method, not its subject matter.
+  - rational choice (purposeful behavior)
+  - stable preferences
+  - equilibrium (in either implicit or explicit "markets")
+- economists study many types of "non-market" behavior:
+  - crime
+  - education
+  - fertility
+  - health
+  - time use
+
 ## What Good is (Economic) Theory?
+
+- theories are good for:
+  - understanding mechanisms
+  - generating predictions for new circumstances
+- obviously, theories have to be tested against evidence
+  - so, we will avoid theories that are _unfalsifiable_ (no _empirical content_)
+  - compare: astrology, Tarot reading
+- what do we have that journalists don't?
+  - coherent body of theory
+  - the concept of "equilibrium": different people's actions have to be mutually consistent
+  - a sharp focus on causation
+- think of economic theory as
+  - a way of building up judgement by studying simplified cases
+  - helps us think about how to interpret the evidence
 
 ## Outline for Today
 
