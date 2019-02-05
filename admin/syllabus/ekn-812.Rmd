@@ -4,8 +4,8 @@ output:
     keep_tex: false
     fig_caption: yes
     latex_engine: pdflatex
-    template: /Users/jnaidoo/Dropbox/office/templates/svm-latex-syllabus.tex
-bibliography: /Users/jnaidoo/Dropbox/office/library.bib
+    template: ../../../../../templates/svm-latex-syllabus.tex
+bibliography: ../../../../../library.bib
 biblio-style: authordate1
 geometry: margin=1in
 
@@ -14,7 +14,7 @@ author: Jesse Naidoo
 date: "Semester 1, 2019"
 
 email: "jesse.naidoo@up.ac.za"
-# web: "svmiller.com/teaching"
+web: "github.com/up-ekn-812-2019"
 officehours: "TBD"
 office: "Tukkiewerf 2-23"
 classroom: "Tukkiewerf 1-37"
@@ -46,7 +46,7 @@ advdate <- function(obj, adv) {
 library(RefManageR)
 # library(knitcitations)
 # library(rcrossref)
-bib <- ReadBib("~/Dropbox/office/library.bib")
+bib <- ReadBib("../../../../../library.bib")
 myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
 
 ```

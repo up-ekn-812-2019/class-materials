@@ -6,7 +6,7 @@ institute: University of Pretoria
 fontsize: 10pt
 output:
  beamer_presentation:
-    template: /Users/jesse/Dropbox/home/templates/svm-latex-beamer.tex
+    template: ../../../../../templates/svm-latex-beamer.tex
     keep_tex: false
     incremental: true
 #    toc: true
@@ -14,7 +14,7 @@ output:
  ioslides_presentation:
     smaller: true
 make149: true
-bibliography: /Users/jesse/Dropbox/home/library.bib
+bibliography: ../../../../../library.bib
 biblio-style: authordate1
 ---
 
@@ -278,7 +278,7 @@ padding-bottom: 10px;
   - differentiate the identity $x^M(p, e(p,u)) \equiv x_i^H(p, u)$ wrt $p_j$
 - the result is called the "Slutsky equation": 
     $$
-    \varepsilon^M_{ij} = \varepsilon^H_{ij} - s_j\eta_j
+    \varepsilon^M_{ij} = \varepsilon^H_{ij} - s_j\eta_i
     $$
 - so, we can form the matrix $\sigma$, assuming we had enough data with exogenous variation in prices and incomes
 - then, the properties we mentioned are testable implications of rational choice
