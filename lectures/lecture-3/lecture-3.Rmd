@@ -1,0 +1,248 @@
+---
+title: EKN-812 Lecture 3
+subtitle: Intertemporal Choice; Demand for Durable Goods
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: false
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #522D80;
+
+}
+
+.title-slide hgroup h1 {
+  color: #522D80;
+}
+
+
+
+h2 {
+
+  color: #522D80;
+}
+
+slides > slide.dark {
+  background: #522D80 !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+# Loose Ends
+
+## CV, EV, and Consumer Surplus
+
+- consider the case of a price increase
+- $EV = e(p_0, u_1) - e(p_0, u_0)$
+    - old prices; new level of utility (_equivalent_ variation)
+- $CV = e(p_1, u_0) - e(p_0, u_0)$
+    - new prices, old level of utility (_compensating_ variation)
+- remember:
+    - $y = e(p_0, u_0) = e(p_1, u_1)$
+    - these points lie on the Marshallian demand curve too
+- write the differences in $e(p, u)$ as an integral under a Hicksian demand curve
+
+## Proof That $\eta_i = 1$ for Homothetic Demands
+
+
+# Price Subindices
+
+## Implications of Weak Separability
+
+- say we have $u = u(x, v(y,z))$
+    - $(y,z)$ are weakly separable from $x$
+- suppose $p_y$ changes
+    - conditional on $v$, there is a within-group substitution effect
+    - the cost of $v$ changes, inducing a substitution effect between $(x,v)$
+    - this in turn gives us an income effect on $v$ and thus on $y$ and $z$
+- example: suppose
+    - $u(x,v) = x + \log(v)$
+    - $v(y,z) = \min\{y,z\}$ 
+    - normalize the price of $x$ to unity
+- first, compute the Hicksian demands 
+    - $y^H(p_y, p_z, v)$ and similarly for $z^H$
+- what is the objective for the cost-minimization problem over $(x,v)$?
+
+## Implications of Weak Separability
+
+- compute $\varepsilon^H_{yz}$ directly:
+$$
+\varepsilon^H_{yz} = -\frac{p_z}{(p_y + p_z)}
+$$
+    - is this what we would have expected?
+- what about across-group substitution, say $\varepsilon^H_{xy}$?
+    - would expect $\varepsilon^H_{xy}$ to be proportional to 
+      $$
+      \varepsilon^H_{xy} \propto \frac{\partial \log c_v}{\partial \log p_y}
+      $$
+    - notice the latter is the cost share of $y$ in $v$
+    - this is not specific to these preferences (use the envelope theorem!)
+
+## Implications of Weak Separability
+
+- suppose $y$ = cars and $z$ = fuel
+    - would a tax on fuel and a subsidy to cars result in more or less traffic?
+    - would people benefit from such a policy?
+    - will spending on transport rise or fall?
+- notice that this structure allows us to define and measure the "cost of driving"
+    - does not depend on the consumption of other goods
+    - other examples of price subindices?
+
+# Life-Cycle Consumption
+
+## Consumption and Savings
+
+- suppose we have a two-period model
+    - income in each period $t = 0,1$ is $y_t$
+    - consumption in each period is $c_t$
+    - there is a capital market offering gross returns of $(1+r)$
+    - saving (possibly negative) is $s_0$
+- what are the constraints?
+    - what if there were a limit to borrowing?
+- when does the borrowing constraint bind?
+    - implications for consumption?
+    - if an increase in $y_0$ causes an increase in $c_0$, is this evidence of "credit constraints"?
+    - are "credit constraints" the same as poverty?
+
+## Consumption and Savings
+
+- let $p = (1+r)^{-1}$ be the "market discount factor" (relative price of $c_1$)
+- notice that, by the envelope theorem,
+    $$
+    \frac{\partial u^*}{\partial p} = \lambda^*\cdot(y_1 - c^*_1)
+    $$
+- net borrowers are worse off when interest rates rise
+    - conversely, borrowers benefit from lower interest rates
+- net savers are better off when interest rates rise
+
+## Consumption and Savings
+
+- suppose we have time-separable CRRA utility:
+    $$
+    v(c_t) = \frac{c_t^{1-\gamma^{-1}}}{1-\gamma^{-1}}
+    $$
+- what is the MRS = MRT condition?
+    - this is often called the "Euler equation"
+- what can we say about the effect of interest rates on consumption over time?
+    - here, $\gamma$ is called the "elasticity of intertemporal substitution"
+- what happens when $(1+r)$ rises?
+    - higher interest rate $\longrightarrow$ present consumption more expensive relative to future
+    - substitution effect: save more
+
+## Consumption and Savings
+
+- find the Marshallian demands:
+    - for convenience, assume $\beta(1+r) = 1$
+    - can show that 
+      $$
+      \frac{\partial \log c_0}{\partial \log p} = \frac{py_1}{y_0 + py_1} - (\gamma - 1)\frac{p}{1 + p}
+      $$
+    - what if $y_1$ is large relative to $y_0$?
+- notice also that 
+  $$
+  \frac{\partial \log c_0}{\partial \log y_0} = \frac{y_0}{y_0 + py_1} < 1
+  $$
+- this is a version of the "permanent income hypothesis"
+    - temporary increases in income have small effects on current consumption
+    - increases in _permanent_ income have much larger effects
+
+## Life-Cycle Labor Supply
+
+- suppose period-specific utility is 
+  $$
+  u(c_t, h_t) = \frac{c_t^{1 - \eta}}{1 - \eta} - \alpha\frac{h_t^{1 + \gamma}}{1+\gamma}
+  $$
+    - here $\alpha > 0$ is some known constant
+- suppose you live for $T$ periods and face a given sequence of wages $w_0, w_1, \ldots$
+    - if you can borrow and save freely at gross rate $1+r$, what is the budget constraint?
+- from the first-order conditions
+    - elasticity of substitution for labor supply in different periods is $1/\gamma$
+    - people often call this the "Frisch elasticity of labor supply"
+- these preferences are useful for studying "dynamic" or life-cycle labor supply
+    - $\eta \geq 0$ governs the strength of income effects
+    - $\gamma$ governs the strength of substitution effects
+    - see @Keane2011b
+
+## Life-Cycle Labor Supply
+
+- consider some different policies:
+    - tax labor earnings and use the revenue to pay for unconditional transfers 
+    - tax labor earnings and use the revenue to pay for public goods (or a war)
+    - a temporary "tax holiday" that expires after a year
+- Frisch elasticity is useful for predicting the effects of a small increase in $w_{t+1}/w_t$
+    - if $T$ is large, and $w_{t+1} + w_{t}$ is constant, income effects will be negligible
+    - a small, temporary demand shock
+- you can show that the Frisch elasticity is an upper bound for the Hicksian and Marshallian elasticities
+    - estimates of $1/\gamma$ are very close to zero, at least for prime-age men who work full-time
+    - taking this at face value, what are the implications?
+- macroeconomists tend to believe $1/\gamma$ is large, say 2-4
+    - this is because aggregate wages don't fluctuate much at business cycle frequencies
+    - however, aggregate hours do move a lot over the business cycle
+
+# Durable Goods
+
+## Rental vs. Capital Prices
+
+- suppose we have some durable good $S_t$ and a nondurable $c_t$
+    - durables depreciate at rate $\delta$ and sell for $v_t$
+    - and, some financial asset $A_t$ with gross returns $1+r$
+- what is the one-period ahead budget constraint ("law of motion" for wealth)?
+- suppose we have two periods and impose that $A_2 = 0$
+    - this can be justified by $A_2 \geq 0$ (a no-Ponzi condition) + optimality
+- what is the present-value form of the intertemporal budget constraint?
+    - notice that
+      $$
+      v^*_t = v_t - v_{t+1}\left(\frac{1-\delta}{1+r}\right)
+      $$
+    - this is called the _user cost_ of durables: the implied rental rate
+
+## Demand for Durables
+
+- so far we have just described the budget constraint
+- now, suppose preferences are
+    $$
+    u = \sum^T_{t=0}\beta^t v(c_t, S_t)
+    $$
+    - assumption is that the _service flow_ is proportional to stock of durables
+- how would we introduce borrowing constraints into this model?
+
+## References
