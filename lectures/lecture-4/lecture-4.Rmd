@@ -1,0 +1,228 @@
+---
+title: EKN-812 Lecture 4
+subtitle: Uncertainty; Risk-Sharing
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: true
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #522D80;
+
+}
+
+.title-slide hgroup h1 {
+  color: #522D80;
+}
+
+
+
+h2 {
+
+  color: #522D80;
+}
+
+slides > slide.dark {
+  background: #522D80 !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+# Contingent Commodities
+
+## Contingent Commodities
+
+- suppose there are $S$ "states of nature"
+    - probability that $s$ occurs is $\pi_s$
+    - e.g. $s = 0$ is "sunny", $s = 1$ is "rainy"
+- more generally:
+    - there is a vector of $n$ "physical" commodities $x = (x_1, \ldots x_n)$
+    - we could consider the set of all $nS$ _contingent commodities_
+    - and, define preferences over this set of goods in the usual way
+- however, we mainly use a special form of preferences where
+  $$
+  u(x_{1,1}, \ldots x_{n,1}, \ldots x_{n,S}) = \sum^S_{s=1}\pi_sv(x_s)
+  $$
+    - in this formulation, it is useful to think of $x_s$ as a random vector
+
+## Arrow-Debreu Securities
+
+- trade in contingent markets may seem farfetched 
+    - but, there is an equivalent way to support such trades ("Arrow-Debreu securities")
+- suppose you have $S$ assets, each of which pays off one unit in state $s$
+    - then, you could implement any consumption lottery by trading in these assets
+- in fact, this is stronger than we need
+    - we do need that there are "enough" different assets to replicate any contingent allocation
+    - if not, we say we have "incomplete markets" and equilibria will not necessarily be efficient
+    - see e.g. @Sargent2018, Ch. 8
+- a larger point is that trade in asset markets 
+    - provide opportunities for consumption smoothing 
+    - not just for investment over time
+    
+
+# Expected-Utility Preferences
+
+## Expected Utility
+
+- we can justify the construction of expected utility preferences with some axioms
+    - see e.g. @Varian1992, Ch. 11
+- note that expected utility preferences are a special type of additively separable preferences
+  $$
+  u(x_{1,1}, \ldots x_{n,1}, \ldots x_{n,S}) = \sum^S_{s=1}\pi_sv(x_s)
+  $$
+    - this does impose restrictions on substitution across states, if feasible
+
+## Risk Aversion
+
+- let's consider the special case where there is only one physical good
+    - if relative prices don't vary with the state $s$
+    - could justify with the composite commodity theorem
+- Jensen's inequality: if $v(x)$ is concave, for any $\lambda \in [0,1]$
+    - $\lambda v(x_0) + (1-\lambda) v(x_1) \leq v(\lambda x_0 + (1-\lambda)x_1)$
+    - concavity means $v$ always lies below its tangent
+    - or, any chord connecting two points on the graph of $v$ lies below $v$
+- the economics of this are that, if you have a risky "lottery", $E[v(c)] \leq v(E[c])$
+
+## Certainty Equivalents
+
+- consider $\widetilde{c}$ such that
+    $$
+    v(\widetilde{c}) = E[v(c)]
+    $$
+    - this is called the _certainty equivalent_ of the risky consumption lottery $c$
+    - certainty equivalents are really just a monotone transformation of expected utility
+        - as such, we can rank lotteries equally well by their certainty equivalents
+        - this is because they represent the same preferences
+- e.g. if $c = 1$ with probability $p$ and $c = 2$ with probability $1-p$ and $v(c) = \log(c)$
+    - show that $\widetilde{c} = 2^{1-p}$
+    - what if $c \sim U(1, \overline{c})$?
+
+## Certainty Equivalents
+
+- a useful fact: if $\log X \sim N(\mu, \sigma^2)$, then
+    - $E[X] = \exp[\mu + \sigma^2/2]$
+    - what about $E[X^\delta]$?
+    - this distribution is called the "lognormal" distribution
+- if we have $v(c) = -\exp[-rc]$, and $c$ is normal, 
+    - what is $E[v(c)]$?
+    - these are called _constant absolute risk aversion_ (CARA) preferences
+    - the name refers to the fact that $-u''(c)/u'(c)$ is constant, for all levels of wealth
+
+## Certainty Equivalents
+
+- with CARA utility, the certainty equivalent of $c \sim N(\mu, \sigma^2)$ is
+  $$
+  \widetilde{c} = \mu - r\sigma^2/2
+  $$
+    - the difference $E[c] - \widetilde{c}$ is called the _risk premium_
+    - i.e. the extra expected return you'd need to accept the risk
+- if the (vNM) utility function is $v(c) = c^{1-\gamma}/(1-\gamma)$
+    - first, confirm $v$ is concave
+    - next, note that the _coefficient of relative risk aversion_ is constant:
+      $$
+      \frac{cv''(c)}{v'(c)} = \gamma
+      $$
+    - these preferences are called "CRRA preferences" or "power utility"
+- with _lognormal_ consumption risk, the risk premium is $\gamma\sigma^2/2$
+    - note, this distribution of $c$ is different to the CARA case above!
+    - in particular we have $c > 0$ always
+    - unfortunately the distribution of the sum of lognormals is hard to express
+        - we mostly ignore the possibility of $c < 0$ for convenience in the CARA case
+
+# Risk-Sharing
+
+## Insurance
+
+- with "actuarially fair" prices, would demand full insurance
+- what is the "fair" price of R1 in state $s$?
+    - must be $\pi_s < 1$ - why?
+- thus, the budget constraint is
+  $$
+  \sum^S_{s=1}\pi_sc_s = y
+  $$
+- with expected-utility preferences:
+    $$
+    \max_{(c_s)_s} \sum^S_{s=1}\pi_sv(c_s) \text{ s.t. } \sum^S_{s=1}\pi_sc_s = y
+    $$
+    - the FOC are that $\pi_s v'(c_s) = \lambda \pi_s$
+    - thus, $c_s = c_{s'}$ for all states $s, s'$
+
+## Insurance
+
+- key to the full-insurance result is that $v(c)$ is _state-independent_
+    - what if the marginal utility of consumption is affected by e.g. poor health?
+    - leads to a theory that allows us to value improvements in health or disability insurance
+        - e.g. @Murphy2006 or @Low2015
+
+## Risk Sharing
+
+- if people are risk-averse, and their incomes are not perfectly correlated
+    - there will be gains from sharing risk
+    - i.e. providing insurance to each other
+- this is one of the key elements in the economic theory of the family
+    - other institutions provide informal risk-sharing:
+        - neighbors can provide help (often in kind)
+        - merchants can extend credit
+        - temporary migration (e.g. @Morten2019)
+    - storage of goods or sale of assets can also help to smooth consumption
+- links between risk-sharing and investment are central in development economics
+
+## Risk Sharing
+
+- suppose there are $s = 1, \ldots S$ states with probabilities $\pi_s$
+- there are two agents with expected-utility preferences
+    - vNM utility for $a$ is $v_a(c_{a,s})$ and similarly for $b$
+- each has a random endowment $y_{a,s}$ and $y_{b,s}$
+- what would be the _optimal_ way to share their joint income?
+    - for now let's take "efficiency" to mean "maximizes a weighted average of utilities"
+    - this leads to the objective function - for some $\theta \in [0,1]$ -
+    $$
+    \theta E[v_a(c_{a,s})] + (1-\theta)E[v_b(c_{b,s})] = \sum^S_{s=1}\pi_s[\theta v_a(c_{a,s}) + (1-\theta)v_b(c_{b,s})]
+    $$
+- what are the constraints?
+    - $a$ and $b$ cannot move resources across states (absent some external market)
+    - so, for each state $s$, we have to have $c_{a,s} + c_{b,s} \leq y_{a,s} + y_{b,s}$
+- there are typically also "participation constraints" on these allocations
+    - e.g. would $a$ accept a contract that sets $c_{a,s} = 0$ and $c_{b,s} = y_{a,s} + y_{b,s}$?
+    - what is the worst contract that $a$ would accept?
+
+## References

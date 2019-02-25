@@ -8,7 +8,7 @@ output:
  beamer_presentation:
     template: ../../../../../templates/svm-latex-beamer.tex
     keep_tex: false
-    incremental: false
+    incremental: true
 #    toc: true
     slide_level: 2
  ioslides_presentation:
@@ -83,6 +83,29 @@ padding-bottom: 10px;
 
 ## Proof That $\eta_i = 1$ for Homothetic Demands
 
+- first, suppose that $u(x)$ is homogeneous of degree 1
+    - this is stronger than we need: recall utility is ordinal 
+    - so we only need that there is some increasing $f$ such that $f(u(x))$ is h.d. 1
+- suppose $x^M(p, y_0) = x^*_0 = \arg\max u(x) \text{ s.t. } px \leq y_0$
+    - let $t > 0$ be given (say $t = 2$ for concreteness)
+    - and let $x^M(p, ty_0) = x^*_1 = \arg\max u(x) \text{ s.t. } px \leq ty_0$
+- we know $v(p, ty_0) \geq tv(p,y_0)$ by feasibility
+    - could always choose $tx^*_0$ 
+- suppose the inequality is strict, so $v(p,ty_0) = u(x^*_1) > tu(x^*_0)$
+    - then $t^{-1}x^*_1$ is feasible when $y = y_0$ (check this)
+    - and $u(t^{-1}x^*_1) > v(p, y_0) = u(x^*_0)$ by assumption
+    - then $x^*_0$ was not optimal to begin with - a contradiction
+
+## Proof That $\eta_i = 1$ for Homothetic Demands
+
+- interpretation: with $u$ homogeneous,
+    - if you can do better when rich ($x^*_1$) than just a scaled-up version of what you did when you were poor ($x^*_0$)
+    - then, you should have chosen a scaled-down version of your choices when rich in the first place
+- thus, we have shown that for all $t$ and all $y_0$, 
+  $$
+  x^M(p, ty_0) \equiv x^M(p, y_0) 
+  $$
+    - final step: differentiate wrt $t$ and evaluate at $t = 1$
 
 # Price Subindices
 
@@ -234,6 +257,8 @@ $$
       v^*_t = v_t - v_{t+1}\left(\frac{1-\delta}{1+r}\right)
       $$
     - this is called the _user cost_ of durables: the implied rental rate
+        - exactly analogous to nondurables
+        - useful for e.g. construction of price indices
 
 ## Demand for Durables
 
@@ -244,5 +269,6 @@ $$
     $$
     - assumption is that the _service flow_ is proportional to stock of durables
 - how would we introduce borrowing constraints into this model?
+- what about a "wedge" between the buying and selling price?
 
 ## References
