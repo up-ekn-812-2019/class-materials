@@ -1,0 +1,198 @@
+---
+title: EKN-812 Lecture 5
+subtitle: Elements of Supply
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: true
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #522D80;
+
+}
+
+.title-slide hgroup h1 {
+  color: #522D80;
+}
+
+
+
+h2 {
+
+  color: #522D80;
+}
+
+slides > slide.dark {
+  background: #522D80 !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+# The Firm and Profit Maximization
+
+## The Firm and Profit Maximization
+
+- market responses (to shocks, natural disasters, changes in policy) consist of both demand and supply!
+    - aggregate supply responses are built up from firm behavior
+- _supply curve_: set of quantities of a given product 
+    - that would be provided by a group of firms
+    - under given conditions
+    - at varying prices
+- often we would want to interpret "quantity" as the quantity per unit time
+    - makes continuity much more plausible!
+
+## The Firm and Profit Maximization
+
+- what is a "firm"?
+    - an intermediary between product and factor markets?
+    - an organization which does _not_ use the price mechanism internally?
+        - @Coase1937 famously made this argument
+        - if markets are so efficient, why do firms exist?
+        - but, this definition would include households as firms, too
+- usually, we assume firms try to maximize profits
+    - important extensions: utility maximization
+        - nonprofit firms (hospitals, universities)
+        - state-owned enterprises or regulated utilities
+    - what sort of objectives would we expect these organizations to pursue?
+
+## The Firm and Profit Maximization
+
+- what do we mean by "competition"?
+    - price-taking behavior
+    - has _nothing_ to do with market shares or the number of firms
+    - can have competitive behavior even with one incumbent firm!
+        - "contestable" markets
+        - partly depends on how narrowly you define a "market" (hairdressers, restaurants)
+- if all supply decisions are independent of each other, market supply = sum of firm supplies
+    - need to incorporate extensive margin decisions (firm entry)
+    - we will discuss failures of independence (externalities) later
+
+# Costs
+
+## Costs
+
+- let $c(y)$ be total costs, as they depend on (the rate of) output $y$
+    - $c'(y)$ is _marginal cost_
+    - $c(y)/y$ is _average cost_
+    - as you know, average costs are increasing whenever $c'(y) > c(y)/y$
+- the exact relation between supply and cost curves depends on a firm's objectives
+    - profits are maximized where MR = MC
+        - for a competitive firm, MR = price
+- under the assumption of profit maximization, the firm's supply curve is its marginal cost curve
+    - where $c''(y) > 0$ (MC is increasing)
+    - and where MC > min AC (at least in the long run)
+- if MC is constant, supply decisions are indeterminate at firm level
+    - have to get aggregate quantity from market-clearing condition
+
+## Costs
+
+- of course, we could think of other objectives
+    - e.g. if the firm's owners get some benefit from output itself: $u(\pi(p,y), y)$
+- key difference with consumers:
+    - we typically have some idea of what the "outside options" are, i.e. shutting down!
+    - and, profit maximization is a specific type of "utility" function
+    - we don't impose a budget constraint on firms
+        - no income effects in producer theory!
+        - this absence reflects an assumption that firms have free access to capital markets
+
+## Rents
+
+- firms may differ in their costs
+    - even in the long run, some firms may earn economic profits
+- if the superior resources can be traded, they could be counted as a "cost" too
+    - taxi (or mining) licenses
+    - especially fertile land
+    - a specialized piece of capital equipment
+    - is "entrepreneurial talent" an exception?
+- in a sense, profits are always zero
+    - but, this is a tautology!
+    - also, rents are determined by output prices, not the reverse (why?)
+    - so, for the purposes of analyzing market outcomes, we can think of rents as a type of outcome, not a cause
+
+# Short-Run and Long-Run Supply
+
+## Short-Run and Long-Run Supply
+
+- costs do not depend only on (the rate of) output
+    - can depend on the total volume of output
+        - serving several hundred meals a day for a weekend vs a year
+    - could also depend on fluctuations in the rate of output
+        - e.g. intraday fluctuations in Netflix use
+- usually, the cost of using inputs depends (negatively) on expected duration of use
+    - setup or transaction costs are a typical source of this dependence
+- distinction between fixed and variable factors is not a purely technological one
+    - depends on the legal or institutional environment too
+    - e.g. have to search to find suppliers;
+    - may face legal obstacles to hiring or firing
+
+## Short-Run and Long-Run Supply
+
+- how should we expect firms to respond to temporary vs permanent demand shocks?
+    - typically, expect to use more "variable" factors for temporary shocks
+        - unskilled labor
+        - raw materials
+    - for permanent shocks, may be worth finding skilled workers, building extra capacity, etc
+- what is the relationship between short-run and long-run marginal costs?
+    - can derive this formally using the envelope theorem
+        - let $\overline{c}(y) \geq c(y)$ be the short-run cost function; $c(y)$ are long-run costs
+        - $\overline{y}$ is some output level
+        - the difference $\overline{c}(y) - c(y)$ has a minimum of 0 at $\overline{y}$
+        - so, $\overline{c}'(\overline{y}) = c'(\overline{y})$ and $\overline{c}''(\overline{y}) \geq c''(\overline{y})$
+
+# Externalities
+
+## Externalities
+
+- distinguish between _real_ and _pecuniary_ externalities
+    - pecuniary externalities: my actions have effects on prices
+    - real externalities: my actions have effects on others' (real) costs
+        - we are taking costs as given here, but effects on factor prices would be pecuniary externalities too
+- say we have $c_i(y_i, y_j)$ so that $j$'s output decision affects my costs
+    - suppose firms affect each other symmetrically so $y_i = s_i(p, Y)$
+    - here, $Y$ is industry output
+    - the equilibrium condition is $Y = \sum^N_{i=1}s_i(p,Y)$
+- can show that:
+    - if $\partial s_i/\partial Y > 0$, industry supply is more elastic than otherwise
+        - this is the case of "positive externalities": others' output lowers my marginal cost
+    - opposite happens if $Y$ raises my marginal costs: industry supply is _less_ price-elastic
+
+## References

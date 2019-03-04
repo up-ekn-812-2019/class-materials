@@ -1,0 +1,112 @@
+---
+title: EKN-812 Lecture 6
+subtitle: Elements of Supply (2)
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: false
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+<style>
+slides > slide.backdrop {
+  background: white;
+  border-bottom: 0px;
+  box-shadow: 0 0 0;
+}
+
+
+slides > slide {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid  #F66733;
+  box-shadow:  0 3px 0 #522D80;
+
+}
+
+.title-slide hgroup h1 {
+  color: #522D80;
+}
+
+
+
+h2 {
+
+  color: #522D80;
+}
+
+slides > slide.dark {
+  background: #522D80 !important;
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+.segue h2 {
+  color: white;
+}
+
+slides > slide.title-slide {
+  border-bottom: 0;
+  box-shadow: 0 0 0;
+}
+
+ol, ul {
+
+padding-bottom: 10px;
+
+}
+
+</style>
+
+## Setup
+
+- many locations $j = 1, \ldots J$
+- fixed number of fishermen $N$
+- total output $g_j(N_j)$ increasing and concave 
+    - concavity implies that the per-worker catch $g_j(N_j)/N_j$ is decreasing in $N_j$
+    - think of this as due to congestion
+- competitive market for fish, so take $P$ as given
+- government charges a fee $C$ for using each site
+
+## Labor Supply
+
+- what will determine the number of fishermen in each location?
+    - does this vary with the fee charged by the government?
+    - does the price of fish, $P$, affect the allocation of fishermen across locations?
+
+## Price and Quantity in Equilibrium
+
+- given the allocation of fishermen to locations, what is the equilibrium price?
+    - and, what is the equilibrium quantity?
+
+## Supply with Differential Fees
+
+- now, suppose the government charges different fees $C_j$ for each location
+    - could be, but not necessarily, related to the "capacity" of each location
+- what will the equilibrium look like now?
+    - will the locations with high fees have higher average yields?
+- is supply upward sloping (in price) now?
+    - could we have a negatively sloped supply curve? Why or why not?
+
+## Privatization
+
+- now assume one of the locations is privatized, so the owner can set $C_1$ at will
+    - would the private owner choose to set $C_1$ higher or lower than the government fee?
+        - does it matter whether the government fees are common to all locations or not?
+    - what if all fishermen could obtain a given wage $w$ outside of the industry?
+- what if _all_ locations were privatized and could set their own fees?
+    - how would each owner choose to set $C_j$?
+    - what will the equilibrium allocation of fishermen across locations be?
+    - what will be the aggregate supply of fish now?
+    - will the market ever yield the same flat fee structure as the government?
+
+## References
