@@ -1,0 +1,163 @@
+---
+title: EKN-812 Lecture 7
+subtitle: Competitive Equilibrium; Tax Incidence
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+#    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: false
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Outline
+
+- we want to bring together the two sides of product markets now
+- this is our first formal encounter with the idea of "equilibrium"
+  - the actions of suppliers and demanders must be consistent with each other
+  - why aren't wages zero (as employers would like) or infinity (as workers would like?
+- this lecture: mostly based on @McCloskey1985a, Ch. 6 and Ch. 15
+
+# Competitive Equilibrium
+
+## Competitive Equilibrium
+
+- in the market for a single good, a _competitive equilibrium_ is a pair $(p^*, q^*)$ such that
+  - given prices, firms choose a quantity to supply $Q^S = S(p^*)$ where $S(p)$ is industry supply
+  - given prices, consumers choose a quantity to demand $Q^D = D(p^*)$ where $D(p)$ is total demand
+  - the market clears: $q^* = Q^S = Q^D$.
+- for problems involving many markets simultaneously ("general equilibrium"), the definition will be similar
+  - if you have not already seen this in your macro classes (or in a trade class), you will!
+
+# Supply and Demand
+
+## Supply and Demand
+- in equilibrium:
+  - everyone pays the same price; and
+  - individual demands and firm supplies have to add up to the total quantity.
+- these mundane facts have some (perhaps) surprising implications!
+- example of rich buying up grain (in fixed supply, for simplicity) and re-selling it to the poor at half the price
+  - who does this actually benefit?
+  - see fig. 6.5 in @McCloskey1985a
+- example: did the Colonial Stock Act have any effect on credit markets?
+  - see fig. 6.6 in @McCloskey1985a
+  - for comparison: what if UP (and UP alone) was forced to stop enrolling foreign students?
+  - under what conditions would the law have had an effect? 
+    - Hint: what if trusts had constituted a "large" fraction of domestic supply? How large?
+
+# Supply and Demand: Extensions
+
+## Supply and Demand: Extensions
+
+- we can sometimes analyze the relationship between multiple markets in a single diagram
+- example: joint demand for mutton and wool
+  - suppose a synthetic wool substitute is invented, and this reduces the demand for wool
+  - what does this do to the price of _mutton_?
+  - see fig. 6.9 of @McCloskey1985a
+
+## Rent Gradient Problem
+
+- imagine a monocentric city
+  - locations within the city are described by their distance $r \geq 0$ from the center
+  - all jobs in the CBD (at location $r = 0$), and all people earn the same wage $w$
+  - travel time from $r$ is $t = \tau r$ for some given $\tau > 0$
+  - workers take the housing price $R(r)$ as given
+- what will determine where people live and how much rent they pay in different neighborhoods?
+  - consumer's problem: $\max_{c, r} u(c)$ s.t. $c + R(r) \leq w[1-\tau r]$
+  - apply the boundary condition $R(\overline{r}) = \overline{R}$
+    - $\overline{R}$ is some given "farmland" rent
+    - this determines the physical size of the city in equilibrium
+
+## Rent Gradient Problem
+
+- integrate the first-order condition $R'(r) = -w\tau$ to get:
+  $$
+  R(r) - R(0) = - \int^r_0 w\tau ds
+  $$
+    - what does the "rent gradient" look like?
+    - how would an increase in $w$ affect housing prices in expensive vs. cheaper areas?
+    - what about changes in $\tau$?
+- notice, this is a "general equilibrium" model
+  - meaning, we are determining the outcomes in many different markets simultaneously
+  - the goods here are not just consumption, but also housing in the different (infinitely many) locations
+  
+# Tax Incidence
+
+## Tax Incidence
+
+- to think about the effects of taxes, we have to generalize our definition of an equilibrium
+- define an equilibrium with a per-unit tax of $t$ to be a triple $(p^*_S, p^*_D, q^*)$ such that 
+  - given the price suppliers recieve, firms want to supply $q^*$: $q^* = S(p^*_S)$
+  - given the price buyers pay, consumers demand $q^*$: $q^* = D(p^*_D)$
+  - the difference between the supply price and the demand price is $t$: $p^*_D = p^*_S + t$
+
+## Tax Incidence
+
+- the market clearing condition $S(p_S) \equiv D(p_S + t)$ has to hold at all $t$
+  - so, we can differentiate with respect to $t$ to see how changes in the tax affect market outcomes
+  - we get 
+  $$
+  S'(p) \times \frac{dp_S}{dt} = D'(p_s + t)\times \left[\frac{dp_S}{dt} + 1\right]
+  $$
+  which can be rearranged to read
+  $$
+  \frac{dp_S}{dt} = \frac{D'(p^*_S + t)}{S'(p^*_S) - D'(p^*_S + t)}
+  $$
+- if we multiply and divide by $p^*_S/q^*$ and let $t \rightarrow 0$ (i.e. considering small taxes), we get
+  $$
+  \frac{dp^*_S}{dt} = \frac{-\varepsilon_D}{\varepsilon_S + \varepsilon_D}
+  $$
+  - here $\varepsilon_D = -p^*D'(p^*)/D(p^*) > 0$ is the elasticity of demand (evaluated at the no-tax equilibrium)  
+  
+## Tax Incidence
+
+- implications:
+  - the _legal_ incidence of a tax is IRRELEVANT for its _economic_ incidence
+    - prices are free to adjust, so "who writes the check" doesn't matter
+  - the more inelastic side of the market bears a greater fraction of the burden
+    - usually the reason for highly elastic demand is that you have good alternatives!
+  - what about on the supply side?
+    - highly elastic supply could mean that marginal costs are close to constant
+    - if so, you can't do much to force competitive firms' prices lower
+- now, how does the imposition of the tax affect equilibrium quantities?
+  - can read $q^*$ off either demand or supply curves (why?)
+  - we get that (for a small tax $t \approx 0$)
+  $$
+  \frac{dq^*}{dt} = S'(p^*)\frac{dp_S}{dt} = \varepsilon_S\times \left(\frac{q^*}{p^*}\right)\times \left(\frac{-\varepsilon_D}{\varepsilon_S + \varepsilon_D}\right)
+  $$
+- notice that the quantity effects are larger when either $\varepsilon_S$ or $\varepsilon_D$ are large
+  - by definition, high elasticity (on either side of the market) means that quantities are sensitive to prices
+
+## Tax Incidence
+
+- what about the deadweight loss of the tax?
+  - $DWL \approx \frac{1}{2} \times t \times dq^*$
+  - using the previous results, this is
+  $$
+  DWL \approx \frac{1}{2}\times \left(\frac{q^*}{p^*}\right)\times \left(\frac{\varepsilon_S\varepsilon_D}{\varepsilon_S + \varepsilon_D}\right)\times t^2
+  $$
+
+- both (or either) elasticity higher results in higher efficiency costs
+  - corollary: may be optimal to tax inelastic goods
+- deadweight loss is proportional to $t^2$
+  - more efficient to spread taxes across many goods
+  - in an intertemporal context:
+    - may want to finance large expenditures (e.g. war) with debt
+    - repay over a longer period instead of burdening just one generation with high taxes
+- pre-existing distortions make the marginal burden worse
+  - the "Harberger triangle" becomes a trapezoid
+  - a corollary of the first point above!
+    
+## References

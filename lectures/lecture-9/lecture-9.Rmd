@@ -1,0 +1,274 @@
+---
+title: EKN-812 Lecture 9
+subtitle: Monopoly (2); Monopolistic Competition
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+#    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: false
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+# Welfare Economics of Monopoly
+
+## Why Are Monopolies Bad?
+
+- as we discussed before, question should always be "relative to what?"
+  - if the relevant alternative is a competitive industry with the same costs, social losses come from underprovision
+  - there are marginal units that consumers value above marginal cost, but they don't get sold
+  - this, and not the fact that prices are "high", is the source of social loss
+- notice that monopolists themselves are harmed by the fact that they face downward-sloping demand
+  - that is, relative to a world in which they could charge different buyers different prices
+- in fact, if you can charge each buyer exactly their willingness to pay
+  - the monopolist could extract the entire consumer surplus
+  - and, this would be socially efficent! (although obviously "unfair")
+  - this is called "first-degree price discrimination"
+  
+## Why Might Monopolies Be Good?
+
+- defenses of monopoly you sometimes hear
+  - can subsidize other activities (unprofitable routes for airlines, postal delivery, medical care)
+- is it a good idea to provide services via cross-subsidization?
+  - highly vulnerable to competition!
+    - e.g. many medical services may not require a doctor
+    - high prices on profitable routes attract entry by other firms
+  - why does the subsidy (to rural customers, poor people, etc) need to be provided via the suppliers?
+  - why not just give the money directly to the intended beneficiaries?
+- infant industry tariffs
+  - defense is that industry will eventually see productivity gains if shielded from competition "initially"
+    - of course, "initially" has a way of lasting for a long time in practice
+    - even if productivity gains come, are the years of higher prices worthwhile?
+  
+# Price Discrimination
+
+## Price Discrimination
+
+- any time you charge different buyers different prices for the same good
+  - "price discrimination"
+  - by itself, this is evidence of monopoly power (i.e. that the firm is _not_ a price-taker)
+  - in practice, of course, this can be hard to prove
+    - how do we know cost differences don't explain price differences?
+- key obstacles in practice:
+  - preventing resale
+  - getting consumers to reveal their WTP
+
+## Price Discrimination
+
+- 1st degree - perfectly "personalized" pricing, so consumers pay exactly WTP for each unit
+  - socially efficient
+  - examples: higher education (maybe)
+- 2nd degree - quantity discounts
+  - examples: water, electricity, some food items
+- 3rd degree - segment consumers into groups by observable characteristics
+  - examples: geographically separate markets; discounts for youth or elderly
+  - trade-in discounts for consumer durables (why?)
+  - time of purchase (e.g. airlines, hotels)
+- these terms are not completely standardized
+  - nor are these pricing strategies mutually exclusive!
+
+# Durable Goods and the Coase Conjecture
+
+## Durable Goods and the Coase Conjecture
+
+- a monopolist who sells a _durable_ good faces an interesting dilemma
+  - effectively have to compete with future versions of yourself
+  - arises from an inability to commit to keep future production down
+- if repricing can happen quickly enough, the monopolist may be forced to price at marginal cost
+  - this was first suggested by @Coase1972
+  - proved formally by @Stokey1981; see also @Bulow1982
+- these considerations create incentives to
+  - reduce the durability of the good ("planned obsolescence")
+  - underinvest in capacity to keep marginal costs high
+  
+## Durable Goods and the Coase Conjecture
+
+- we can prove a version of these claims in a simple two-period model, as in @Bulow1982
+  - no costs of production and no depreciation 
+  - one-period rental price is $r_t = \alpha - \beta s_t$, where
+    - $r_t$ = WTP for one period of use
+    - $s_t$ = _stock_ of good currently available
+    - thus, if $q_t$ is produced in period $t$, $s_2 = s_1 + q_2 = q_1 + q_2$
+- we can show that the profit of a monopolist renter is
+  $$
+  \pi^*_R = \frac{\alpha^2}{4\beta}(1 + \delta)
+  $$
+  where $\delta = (1+\rho)^{-1}$ is shorthand for the discount factor
+  
+## Durable Goods and the Coase Conjecture
+
+- the problem a seller faces is different
+- the tricky part is figuring out what first-period buyers are willing to pay
+  - given their expectations of second-period prices
+  - we proceed by backwards induction
+- in period 2, suppose $\overline{q}_1$ has already been produced
+  - the seller will want to produce $q_2 = (\alpha - \beta \overline{q}_1)/2\beta$
+  - this will result in a rental (and capital) price of
+    $$
+    r_2 = \frac{1}{2}(\alpha - \beta \overline{q}_1)
+    $$
+- so, first-period buyers will be willing to pay
+  $$
+  p_1(q_1) = (\alpha - \beta q_1) + \delta\cdot\frac{1}{2}(\alpha - \beta q_1)
+  $$
+  for $q_1$ units in period 1 
+  - imagine they plan to sell after using the good for one period
+  
+## Durable Goods and the Coase Conjecture  
+
+- second-period revenues (and profits) are just $q_2 \times r_2$
+  - since this is the last period, the distinction between rental and capital prices disappears
+  - the price will be $r_2(q_1 + q_2) = p_2(q_1 + q_2) = \alpha - \beta(q_1 + q_2)$
+- so, the profit function of the seller is
+  $$
+  \pi_S(q_1, q_2) = p_1(q_1)q_1 + \delta p_2(q_1 + q_2)q_2
+  $$
+- you can show that the maximal profit of the seller will be 
+  $$
+  \pi^*_S = [4 + \delta]\beta^{-1}(\beta q^*_2)^2
+  $$
+  - the seller's optimal second-period production will be
+  $$
+  \beta q^*_2 = \frac{\alpha [1 + \delta/2]}{2[2 + \delta/2]}
+  $$
+- then, the profit of the seller relative to that of the renter is
+$$
+\frac{\pi^*_S}{\pi^*_R} = \frac{[4 + \delta]\beta^{-1}(\beta q^*_2)^2}{[1+ \delta]\beta^{-1}(\alpha/2)^2} < 1
+$$
+  - thus, the seller makes lower profits than the renter
+
+## Durable Goods and the Coase Conjecture 
+- we can push this interpretation a bit further
+  - suppose you could make the good less durable
+    - e.g so that it lasted for only one period, not two
+  - then, you'd be in the renter's situation, not the seller's
+  - "planned obsolescence"
+- you might also want to deliberately reduce future production capacity
+  - idea is to credibly signal low future production
+  - this would raise the willingness to pay of buyers
+  - an extreme example: limited editions of artworks, music, etc
+    - may want to destroy the originals!
+    
+# Monopolistic Competition
+
+## Monopolistic Competition
+
+- combine some elements of monopoly
+  - firms face downward-sloping demand
+- and, some elements of competition
+  - take others' prices as given
+  - free entry in long-run
+- often used as a model for "differentiated goods"
+- in the short run, looks just like monopoly
+  - but, in the long run, free entry shifts in demand until profits are zero
+- long-run equilibrium is defined by the two conditions
+  - $MR = MC$
+  - $P = AC$
+  - can show that these two imply that demand is _tangent_ to the AC curve
+  
+## Dixit-Stiglitz Demand
+
+- now, we study some properties of the _Dixit-Stiglitz_ demand system
+- suppose consumer preferences are CES:
+  $$
+  c = \left(\sum^N_{i=0}q_i^\rho\right)^{1/\rho}
+  $$
+  - think of $c$ as an aggregate of the different "brands" in the industry
+    - some measure of average consumption of, e.g. "dining out" or "shoes"
+    - even though there are many different types of restaurants or shoes
+    - often you will want to embed this consumption aggregate in a larger demand system
+- important restriction: $0 < \rho < 1$
+  - this allows some of the $q_i$ to be zero
+  - that's important because it allows us to think about changing the set of goods on offer
+  - it also means that the elasticity of substitution between varieties is $> 1$
+  $$
+  \sigma  = \frac{1}{1-\rho} > 1
+  $$
+
+## Dixit-Stiglitz Demand
+
+- the consumer's problem, given a budget $I$ to spend on the different varieties $q_i$, is
+$$
+\max_{(q_i)_i} c \text{ s.t. } I \geq \sum^N_{i=1}p_iq_i
+$$
+- the first-order conditions imply that for any $i$, $j$:
+  $$
+  \frac{q_i}{q_j} = \left(\frac{p_i}{p_j}\right)^{-\sigma}
+  $$
+  - thus, there is some constant $K$ such that for all $i$,
+  $$
+  q_i = Kp_i^{-\sigma}
+  $$
+  - to figure out what this constant of proportionality $K$ is, multiply by $p_i$ and add over $i$:
+  $$
+  I = \sum^N_{i=1}p_iq_i = K\sum^N_{i=1}p_i^{1-\sigma}
+  $$
+  
+## Dixit-Stiglitz Demand
+
+- we can write demands in a more convenient format by defining
+$$
+P = \left(\sum^N_{i=1}p_i^{1-\sigma}\right)^{1/(1-\sigma)}
+$$
+  - this is a price index which has some nice properties (discussed below)
+- with this definition, we have $K = I/P^{1-\sigma}$ and so the demand facing firm $i$ is
+  $$
+  q_i = \left(\frac{I}{P}\right)\left(\frac{p_i}{P}\right)^{-\sigma}
+  $$
+- we can also show that the optimal value of the consumption aggregate is $c^* = I/P$
+  - this is nice, because we can interpret $P$ exactly as the "price of an average unit"
+  - in general, you can't define an "ideal price index" that doesn't depend on wealth, but with these preferences you can
+
+## Dixit-Stiglitz Demand
+
+- then, we have
+  $$
+  q_i = c^*\times \left(\frac{p_i}{P}\right)^{-\sigma}
+  $$
+  so each firm's demand depends on aggregate consumption and its _relative_ price
+  - again, the convenience here is that it's clear how to define "relative price"
+- finally, note that in a symmetric equilibrium with all $p_i = p$, we have $P = N^{1/(1-\sigma)}p$, so
+  $$
+  c^* = I/P = Ip^{-1}N^{-1/(1-\sigma)}
+  $$
+  - recall that $\sigma > 1$, so the consumption aggregate $c^*$ is increasing in the number of types $N$
+  - this is often called "love of variety"
+    - consumers benefit from having more products available
+    - comes up a lot in trade
+
+## Firms' Decision
+
+- suppose firm $i$ has (total) costs $c_i(q_i)$
+- if $N$ is large, the monopolistic competition assumption (take other firms' prices as given) means firm $i$ can ignore the effects of changing its own price on the price index $P$
+- then, firm's problem is 
+  $$
+  \max_{q} Jq^{1 - 1/\sigma} - c_i(q)
+  $$
+  for some constant $J$ 
+    - this constant will depend on consumer's income $I$ and the price index $P$
+    - confirm this by computing firm $i$'s inverse demand $p_i(q_i)$!
+- now, it's easy to show that markups will be constant:
+  $$
+  \frac{p_i}{c_i'(q_i)} = \frac{\sigma}{\sigma - 1}
+  $$
+- finally, in the long run, $N$ adjusts until profits are zero
+
+## Uses of Dixit-Stiglitz
+
+- heavily used in trade and economic geography
+  - in those fields, this demand system allows increasing returns (and thus imperfect competition) to be handled in a very easy way
+  - e.g. @Krugman1991 is a beautiful paper which should be quite accessible (worth reading just the introduction)
+- also very popular in macro, e.g. New Keynesian models
+  - a simple way to allow firms to have pricing power and get simple expressions for e.g. inflation
+  - the restriction $\sigma > 1$ is less important in this context
+    - there, the focus is on dynamics and not on entry of new firms
+    
+## References

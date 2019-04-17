@@ -67,6 +67,10 @@ padding-bottom: 10px;
 
 </style>
 
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
 ## Setup
 
 - many locations $j = 1, \ldots J$

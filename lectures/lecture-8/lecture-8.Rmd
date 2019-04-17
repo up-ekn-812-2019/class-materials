@@ -1,0 +1,172 @@
+---
+title: EKN-812 Lecture 8
+subtitle: Non-Price Rationing; Monopoly (1)
+author: Jesse Naidoo
+institute: University of Pretoria
+fontsize: 10pt
+output:
+ beamer_presentation:
+#    template: ../../../../../templates/svm-latex-beamer.tex
+    keep_tex: false
+    incremental: false
+#    toc: true
+    slide_level: 2
+ ioslides_presentation:
+    smaller: true
+make149: true
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+---
+
+# Outline
+
+## Outline
+
+- what if prices don't adjust to clear markets?
+  - we consider several allocation mechanisms and their welfare effects
+- then, we study a different concept of equilibrium: monopoly
+- this lecture: based on McCloskey, Ch. 16 and Ch. 17 - 18
+  
+# Nonprice Rationing
+
+## Nonprice Rationing
+
+- governments impose not just taxes and subsidies but also
+    - compulsory services
+    - costly regulations
+    - price controls
+    - rationing
+    - constraints on entry (licensing)
+- example: import quotas
+    - must allocate the right to import - and earn the excess profits - somehow
+    - if the quota binds, is this equivalent to a tax?
+
+## Nonprice Rationing
+
+- if markets don't clear in the usual sense, what happens?
+    - a secondary "market" for the rents will develop
+    - often, competition for these rents is itself socially wasteful
+        - talent and time of lawyers, accountants, etc
+        - wasted time (queuing)
+        - violence
+- why are these forms of competition wasteful relative to the price mechanism?
+    - these are real resources being used up to allocate the good
+    - by comparison, when people compete on price, the _process of payment itself_ is not costly
+
+## Nonprice Rationing
+
+- example: restrictions on supply by licenses
+    - how much should one be willing to pay for a licence?
+- example: with a price ceiling, suppose consumers have to queue
+    - how long will the queue be in equilibrium?
+    - is the social loss larger or smaller than the tax that implements the regulated price as an equilibrium?
+    - who bears the burden of the social loss?
+        - what if suppliers served fewer than one buyer each?
+
+## Unassigned Property Rights and "Externalities"
+
+- why do we not worry about cows or pigs being hunted to extinction?
+    - what is the social cost of slaughtering a marginal animal?
+- example: noise pollution at airports
+- Coase "Theorem" - @Coase1960
+    - the technological "cause" of an externality is not relevant for the economic or policy response
+    - allow for side payments: trade in the right to use the resource
+    - under some conditions, the assignment of property rights is irrelevant for the outcome
+        - but, it will be relevant for the distribution of welfare!
+- another way to think about Coase's insight is:
+    - "externalities" are never just a technological phenomenon
+    - they are just as much failures of the contractual environment
+    
+# Monopoly
+
+## Monopoly: Basics
+
+- if a firm faces a downward-sloping demand curve, MR < price
+    - of course, MR = MC is the profit-maximizing rule
+    - what makes competitive firms different?
+- monopolists will never want to be on the inelastic part of the demand curve
+    - how does this come out of the first-order conditions?
+- example:
+    - demand is $D(p) = d_0q^{-\varepsilon}$
+    - industry costs are
+      $$
+      c(q) = \frac{c_0q^{1+\theta^{-1}}}{1 + \theta^{-1}}
+      $$
+
+## Monopoly: Basics
+- can show that the monopolist's price is 
+  $$
+  p^M = d_0^{\varepsilon^{-1}}\left[\frac{d_0^{\varepsilon^{-1}}(1-\varepsilon^{-1})}{c_0}\right]^{-\theta/(\theta+\varepsilon)}
+  $$
+- notice that there is _incomplete pass-through_ of costs:
+  $$
+  \frac{\partial \log p^M}{\partial \log c_0} = \frac{\theta}{\theta + \varepsilon} < 1
+  $$
+  - some subtle differences with the competitive case:
+    - cost shocks at the _industry_ level are also incompletely passed through under competition (why?)
+    - on the other hand, _firm_-specific cost shocks are not passed through at all by competitive firms (why?)
+    - see 2019 NBER lecture by Pinelopi Goldberg: ["Firms in Developing Countries"](https://vimeo.com/284141369) 
+  
+## Monopoly: Curiosities
+
+- monopolists don't have a supply curve: why?
+- some implications:
+    - in some cases, price controls actually raise monopoly output
+    - when will this be the case?
+- can monopoly be "good"?
+  - relative to an otherwise identical competitive industry, no: there is a social loss from reduced output
+  - but, is this a reasonable counterfactual? monopolies typically exist for a reason
+  - monopoly _may_ be better than
+    - a much less efficient competitive industry
+    - average-cost pricing (e.g. in the regulated "natural monopoly" case)
+  - it depends!
+    - have to consider the specifics of demand and costs in each case
+
+## Inferring Monopoly Behavior from Market Data
+
+- can we infer or observe monopoly profits?
+    - this is not an accounting category!
+    - may be "buried" or "dissipated" in costs
+- even apart from the accounting issues, can we be sure observed profits are not
+    - temporary due to inelastic short-run supply? ("quasi-rents")
+    - socially desirable "first-mover advantage"?
+    - competitive rents due to superior productivity? 
+
+## Inferring Monopoly Behavior from Market Data
+
+- barriers to entry _might_ be evidence of monopoly power
+  - but, how can they be distinguished from fixed costs in practice?
+- is the number of sellers, or the distribution of market shares evidence of monopoly?
+  - perhaps, but the threat of entry can mean competitive pricing even with few sellers
+  - professional associations (e.g. in medicine) can help raise prices even though there are many sellers
+- small, finite elasticities of demand facing a firm are certainly evidence of pricing power
+  - but, how do we learn what these are?
+  - suppose your competitors match your price
+    - use the market-clearing condition to write
+    $$
+    \varepsilon_i^D = \frac{1}{s_i}\varepsilon^D - \left(\frac{1 - s_i}{s_i}\right)\varepsilon^S
+    $$
+    - here $\varepsilon^D_i$ is the elasticity facing firm $i$
+    - $s_i$ is firm $i$'s market share
+    - $\varepsilon^D$ is the elasticity of _market_ demand
+    - and $\varepsilon^S$ is the supply elasticity of everyone else (besides firm $i$)
+- price discrimination (discussed later) is definitely evidence of pricing power
+    
+## Inferring Monopoly Behavior from Market Data
+
+- as an example, suppose $\varepsilon^D = 0.5$ and $\varepsilon^S = 1$.
+  - then, the elasticity facing a firm with 20\% market share would be $\varepsilon^D_i = 6.5$
+- is this large or small?
+  - one thing we can say: it implies an 18\% markup over marginal cost
+  - we can also work out the implied welfare loss, using the Harberger approximation from last time
+- in general, we don't observe marginal costs, so any claims about markups have to
+  - rely on a model of market behavior and assumptions about demand and costs (which we may not trust)
+- or, have to find some tricks for inferring marginal cost
+  - e.g. if we observe a monopolist selling in two markets and we know he is a price-taker in one (e.g. export markets)
+  - or, if there is a threat of competition from "nearby" suppliers
+    - see fig. 18.2 of @McCloskey1985a
+  - "nearby" can be interpreted broadly (not just as literal distance)
+    - suppose there are some costs of finding another supplier
+    - then each seller has a little monopoly power, but there are limits defined by these "search costs"
+
+## References
